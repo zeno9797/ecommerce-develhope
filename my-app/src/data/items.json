@@ -22,5 +22,17 @@
         "name": "Nome gioco 4",
         "price": 50.99,
         "imgUrl":"/imgs/4.png"
+    },
+    {
+        "id":5,
+        "name": "Nome gioco 5",
+        "price": 50.99,
+        "imgUrl":"/imgs/1.jpg"
+    },
+    {
+        "id":6,
+        "name": "Nome gioco 6",
+        "price": 50.99,
+        "imgUrl":"/imgs/2.jpg"
     }
 ]
