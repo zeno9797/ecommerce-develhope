@@ -1,5 +1,6 @@
 import {Button, Card } from "react-bootstrap"
 import {Link} from "react-router-dom"
+
 type StoreItemProps = {
     id: number,
     name: string,
