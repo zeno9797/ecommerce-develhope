@@ -2,11 +2,12 @@ import React from 'react'
 import { Button, Card } from "react-bootstrap"
 
 function Product() {
+  const quantity = 0
   return (
     <>
       <div>Home to nome gioco </div>
       <br />
-      
+
       <Card
 
         style={{
@@ -24,11 +25,27 @@ function Product() {
           }} >
             <span className="fs-2">NOME GIOCO</span>
             {/* fs = font size */}
-            <span className="fs-4">50.99 €</span>
+            <span className="fs-4">PREZZO</span>
             <span className="fs-6">disponibile in stock</span>
-            <Button className='w-50'>
-              Aggiungi al carrello
-            </Button>
+            <div className="mt-auto d-flex  flex-column">
+              {quantity === 0 ? (
+                <Button className="w-50 ">Aggiungi al carrello +</Button>
+              ) : <div className='d-flex align-items-center flex-column' style={{ gap: ".5 rem" }}>
+
+
+
+                <div className='d-flex align-items-center justify-content-center' style={{ gap: ".5 rem" }}>
+                  <Button>-</Button>
+                  <div>
+                    <span className='fs-3'>{quantity}</span> nel carrello
+                  </div>
+                  <Button>+</Button>
+
+                </div>
+                <Button variant="danger" size="sm">Remove</Button>
+              </div>
+              }
+            </div>
           </Card.Title>
         </Card.Body>
       </Card>
@@ -58,7 +75,7 @@ function Product() {
             width: "100%"
           }} >
             <br />
-            <h3 style={{textAlign: "center"}}>Descrizione</h3>
+            <h3 style={{ textAlign: "center" }}>Descrizione</h3>
             <br />
             <p className="fs-6">Atterrata d’emergenza su un pianeta alieno e sconosciuto, Selena, la protagonista di Returnal per PS5, deve lottare ogni giorno per non sopperire. Il mondo che le si prospetta davanti, però, non è come la Terra: tutto è in continuo mutamento, in un ciclo costante di cambiamenti e capovolgimenti. Mentre si muove tra le rovine di un’antica civiltà, la cosmonauta è chiamata a combattere con le unghie e con i denti per la propria sopravvivenza. E se non c’è nulla di semplice, ricominciare è ancora più complicato: ogni qual volta Selena viene sconfitta, l’avventura riparte dal principio, come fosse intrappolata in un loop apparentemente infinito. Preparati ad un gameplay roguelike dinamico e frenetico, in cui scontri pirotecnici e atmosfere spettacoli si susseguono senza sosta. La noia, su Returnal per PlayStation 5, non è contemplata: ad ogni ciclo vedrai il modo intorno a te trasformarsi, e con lui anche gli oggetti a tua disposizione. Per consentire a Selena di rimanere in vita e di rompere il cerchio del caos su un pianeta in continua evoluzione dovrai uscire dagli schemi e prepararti ad affrontare i combattimenti con una strategia sempre diversa.</p>
             {/* fs = font size */}
