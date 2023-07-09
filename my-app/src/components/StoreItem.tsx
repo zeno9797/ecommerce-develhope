@@ -12,8 +12,9 @@ type StoreItemProps = {
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
     const {increaseCartQuantity} = useShoppingCart()
     return (
-
-        <Card className="h-100">
+        <>
+        
+        <Card className="h-100 w-100">
             <Link to="/product">
                 <Card.Img variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover" }} />
             </Link>
@@ -25,11 +26,12 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 </Card.Title>
                 <div className="mt-auto d-flex align-items-center flex-column">
 
-                    <Button onClick={()=> increaseCartQuantity(id)} className="w-50 ">Add to cart</Button>
+                    <Button onClick={()=> increaseCartQuantity(id)} className="w-100 ">Add to cart</Button>
 
                 </div>
             </Card.Body>
         </Card>
+        </>
 
     )
 }
