@@ -33,9 +33,9 @@ export function Product({ id, name, price, imgUrl}: StoreItemProps) {
             display: "flex",
             flexDirection: "column"
           }} >
-            <span className="fs-2">{name}</span>
+            <span className="fs-2">NOME GIOCO</span>
 
-            <span className="fs-4">{price}</span>
+            <span className="fs-4">PREZZO </span>
             <span className="fs-6">disponibile in stock</span>
             <div className="mt-auto d-flex  flex-column">
               {quantity === 0 ? (
