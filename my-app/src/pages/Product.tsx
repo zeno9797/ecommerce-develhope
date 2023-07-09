@@ -26,16 +26,16 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
           backgroundColor: "transparent",
           border: "0px"
         }}>
-        <Card.Img variant="top" style={{ width: "380px", height: "460px", marginLeft: "20px" }} src={"https://www.gamingtalker.it/wp-content/uploads/2020/09/returnal-cover-art-800x1024.jpg"} />
+        <Card.Img variant="top" style={{ width: "380px", height: "460px", marginLeft: "20px" }} src={imgUrl} />
         <Card.Body>
           <Card.Title style={{
             marginLeft: "50px",
             display: "flex",
             flexDirection: "column"
           }} >
-            <span className="fs-2">NOME GIOCO</span>
+            <span className="fs-2">{name}</span>
 
-            <span className="fs-4">PREZZO</span>
+            <span className="fs-4">{price}</span>
             <span className="fs-6">disponibile in stock</span>
             <div className="mt-auto d-flex  flex-column">
               {quantity === 0 ? (

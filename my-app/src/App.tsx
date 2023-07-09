@@ -14,7 +14,8 @@ function App() {
         <Container className='mb-4' >
           <Routes>
             <Route path="/" element={<Store />} />
-            <Route path="/product" element={<Product />} />
+            
+            <Route path="/product"  element={ <Product />} />
 
           </Routes>
         </Container>
