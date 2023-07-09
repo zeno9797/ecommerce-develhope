@@ -10,8 +10,8 @@ type StoreItemProps = {
 }
 
 
-export function Product({id, name, price, imgUrl}: StoreItemProps) {
-  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
+export function Product({ id, name, price, imgUrl }: StoreItemProps) {
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
   const quantity = getItemQuantity(id)
   return (
     <>
@@ -34,25 +34,22 @@ export function Product({id, name, price, imgUrl}: StoreItemProps) {
             flexDirection: "column"
           }} >
             <span className="fs-2">NOME GIOCO</span>
-            {/* fs = font size */}
+
             <span className="fs-4">PREZZO</span>
             <span className="fs-6">disponibile in stock</span>
             <div className="mt-auto d-flex  flex-column">
               {quantity === 0 ? (
-                <Button className="w-50" onClick={()=> increaseCartQuantity(id)}>Aggiungi al carrello +</Button>
+                <Button className="w-50" onClick={() => increaseCartQuantity(id)}>Aggiungi al carrello +</Button>
               ) : <div className='d-flex align-items-center flex-column' style={{ gap: ".5 rem" }}>
-
-
-
                 <div className='d-flex align-items-center justify-content-center' style={{ gap: ".5 rem" }}>
                   <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                   <div>
                     <span className='fs-3'>{quantity}</span> nel carrello
                   </div>
                   <Button onClick={() => increaseCartQuantity(id)}>+</Button>
-                  
+
                 </div>
-                <Button onClick={() => removeFromCart(id)}  variant="danger" size="sm">Remove</Button>
+                <Button onClick={() => removeFromCart(id)} variant="danger" size="sm">Remove</Button>
               </div>
               }
             </div>

@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { useShoppingCart } from "../context/ShoppingCartContext"
 
 type StoreItemProps = {
     id: number,
@@ -9,7 +10,7 @@ type StoreItemProps = {
 }
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-
+    const {increaseCartQuantity} = useShoppingCart()
     return (
 
         <Card className="h-100">
@@ -24,7 +25,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 </Card.Title>
                 <div className="mt-auto d-flex align-items-center flex-column">
 
-                    <Button className="w-50 ">Add to cart</Button>
+                    <Button onClick={()=> increaseCartQuantity(id)} className="w-50 ">Add to cart</Button>
 
                 </div>
             </Card.Body>
