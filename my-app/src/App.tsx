@@ -4,20 +4,23 @@ import { Container } from "react-bootstrap"
 import Product from './pages/Product';
 import Store from './pages/Store';
 import { Navbar } from './components/Navbar';
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
 
 function App() {
   return (
     <>
-   <Navbar />
-   <Container className='mb-4' >
-    <Routes>
-    <Route path="/" element={<Store/>}/>
-      <Route path="/product" element={<Product/>}/>
-      
-    </Routes>
-   </Container>
-   </>
-   
+      <ShoppingCartProvider>
+        <Navbar />
+        <Container className='mb-4' >
+          <Routes>
+            <Route path="/" element={<Store />} />
+            <Route path="/product" element={<Product />} />
+
+          </Routes>
+        </Container>
+      </ShoppingCartProvider>
+    </>
+
   );
 }
 
