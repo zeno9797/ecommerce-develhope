@@ -79,7 +79,7 @@ const Store = () => {
             >
               <img src="http://localhost:3000/imgs/fifa.jpg"
                 className="d-block w-100"
-                alt="hogwarts" />
+                alt="fifa" />
             </div>
           </Link>
 
@@ -96,7 +96,7 @@ const Store = () => {
             >
               <img src="http://localhost:3000/imgs/ragnarok.jpg"
                 className="d-block w-100"
-                alt="hogwarts" />
+                alt="ragnarok" />
             </div>
           </Link>
 
