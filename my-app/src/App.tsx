@@ -5,6 +5,7 @@ import Product from "./pages/Product";
 import Store from "./pages/Store";
 import { Navbar } from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             />
           </Routes>
         </Container>
+        <Footer />
       </ShoppingCartProvider>
     </>
   );
