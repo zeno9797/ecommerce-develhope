@@ -17,6 +17,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
     removeFromCart,
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
+
   return (
     <>
       <div>Home to nome gioco </div>
