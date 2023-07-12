@@ -9,15 +9,19 @@ import { Link } from 'react-router-dom'
 const Store = () => {
   return (
     <>
-      <Carousel style={{
-        height: "420px",
+      <Carousel
 
-      }}>
-        <Carousel.Item style={{
+        style={{
           height: "420px",
-          objectFit: "cover",
-          width: 'full'
-        }} >
+
+        }}>
+        <Carousel.Item
+
+          style={{
+            height: "420px",
+            objectFit: "cover",
+            width: 'full'
+          }} >
           <Link
             to='./product'
           >
@@ -107,7 +111,7 @@ const Store = () => {
       <h1> PRODOTTI </h1>
       <br />
 
-      <Row md={2} xs={1} lg={4} className='g-3'>
+      <Row md={2} xs={1} lg={4} className='g-5'>
         {storeItems.map(item => (
           <Col key={item.id}>
             <StoreItem {...item} />

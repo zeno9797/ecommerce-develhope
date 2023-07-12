@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<Store />} />
             {/* <Route path="/product" element={<Product id={0} name={''} price={0} imgUrl={''} />} /> */}
             <Route
-              path="/product/:id"
+              path="/product/:n"
               element={<Product id={0} name={""} price={0} imgUrl={""} />}
             />
           </Routes>
