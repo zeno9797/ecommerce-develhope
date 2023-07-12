@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import storeItems from "../data/items.json"
+import storeItems from "../data/items.json";
 import { useParams } from "react-router-dom";
 
 type StoreItemProps = {
@@ -12,14 +12,14 @@ type StoreItemProps = {
 };
 
 export function Product({ id, name, price, imgUrl }: StoreItemProps) {
-  const { n } = useParams()
-  const [products, setProducts] = useState(storeItems)
+  const { n } = useParams();
+  const [products, setProducts] = useState(storeItems);
 
-  const dataProduct : StoreItemProps = products.find((item) => {
-    return item.id === Number(n) 
-  }) as StoreItemProps
+  const dataProduct: StoreItemProps = products.find((item) => {
+    return item.id === Number(n);
+  }) as StoreItemProps;
 
-  console.log(dataProduct.name)
+  console.log(dataProduct.name);
 
   const {
     getItemQuantity,
@@ -77,11 +77,19 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                     className="d-flex align-items-center justify-content-center"
                     style={{ gap: ".5 rem" }}
                   >
-                    <Button onClick={() => decreaseCartQuantity(dataProduct.id)}>-</Button>
+                    <Button
+                      onClick={() => decreaseCartQuantity(dataProduct.id)}
+                    >
+                      -
+                    </Button>
                     <div>
                       <span className="fs-3">{quantity}</span> nel carrello
                     </div>
-                    <Button onClick={() => increaseCartQuantity(dataProduct.id)}>+</Button>
+                    <Button
+                      onClick={() => increaseCartQuantity(dataProduct.id)}
+                    >
+                      +
+                    </Button>
                   </div>
                   <Button
                     onClick={() => removeFromCart(dataProduct.id)}
