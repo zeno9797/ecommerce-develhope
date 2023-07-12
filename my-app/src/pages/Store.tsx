@@ -22,6 +22,7 @@ const Store = () => {
             objectFit: "cover",
             width: 'full'
           }} >
+            
           <Link
             to='./product'
           >

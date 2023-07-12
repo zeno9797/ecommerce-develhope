@@ -32,7 +32,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
 
   return (
     <>
-      <div>Home to nome gioco </div>
+      <div>Home to {dataProduct.name} </div>
       <br />
 
       <Card
