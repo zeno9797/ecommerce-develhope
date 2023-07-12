@@ -2,13 +2,13 @@
     {
         
         "id":1,
-        "name": "Nome gioco 1",
+        "name": "tekken",
         "price": 50.99,
         "imgUrl":"/imgs/1.jpg"
     },
     {
         "id":2,
-        "name": "Nome gioco 2",
+        "name": "gta",
         "price": 50.99,
         "imgUrl":"/imgs/2.jpg"
     },

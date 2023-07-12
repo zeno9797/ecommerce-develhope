@@ -1,6 +1,7 @@
 import { Button, Nav, Container, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import { Input } from "./Input";
 
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
@@ -13,8 +14,7 @@ export function Navbar() {
           </Nav.Link>
         </Nav>
         <div>
-          <input type="text" />
-          <button>cerca</button>
+          <Input/>
         </div>
         {cartQuantity > -1 && (
           <Button
