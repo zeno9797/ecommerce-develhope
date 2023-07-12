@@ -14,13 +14,7 @@ type StoreItemProps = {
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const { increaseCartQuantity } = useShoppingCart();
   const [isHovered, setIsHovered] = useState(false);
-  // const [products, setProducts] = useState(storeItems);
-  // console.log(
-  //   products.map((e) => {
-  //     return e.name;
-  //   })
-  // );
-
+  
   return (
     <>
       <Card
