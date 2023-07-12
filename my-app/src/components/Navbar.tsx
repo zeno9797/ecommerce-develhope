@@ -6,7 +6,7 @@ import { Input } from "./Input";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4 pb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4 pb-2">
       <Container>
         <Nav className="d-flex">
           <Nav.Link to="/" as={NavLink}>
