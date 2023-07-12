@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import storeItems from "../data/items.json";
+import { useParams } from "react-router-dom";
 
 type StoreItemProps = {
   id: number;
@@ -10,17 +12,27 @@ type StoreItemProps = {
 };
 
 export function Product({ id, name, price, imgUrl }: StoreItemProps) {
+  const { n } = useParams();
+  const [products, setProducts] = useState(storeItems);
+
+  const dataProduct: StoreItemProps = products.find((item) => {
+    return item.id === Number(n);
+  }) as StoreItemProps;
+
+  console.log(dataProduct.name);
+
   const {
     getItemQuantity,
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
   } = useShoppingCart();
-  const quantity = getItemQuantity(id);
+
+  const quantity = getItemQuantity(dataProduct.id);
 
   return (
     <>
-      <div>Home to nome gioco </div>
+      <div>Home to {dataProduct.name} </div>
       <br />
 
       <Card
@@ -34,7 +46,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
         <Card.Img
           variant="top"
           style={{ width: "380px", height: "460px", marginLeft: "20px" }}
-          src={imgUrl}
+          src={dataProduct.imgUrl}
         />
         <Card.Body>
           <Card.Title
@@ -44,15 +56,15 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
               flexDirection: "column",
             }}
           >
-            <span className="fs-2">{name}</span>
+            <span className="fs-2">{dataProduct.name}</span>
 
-            <span className="fs-4">{price} </span>
+            <span className="fs-4">{dataProduct.price} </span>
             <span className="fs-6">disponibile in stock</span>
             <div className="mt-auto d-flex  flex-column">
               {quantity === 0 ? (
                 <Button
                   className="w-50"
-                  onClick={() => increaseCartQuantity(id)}
+                  onClick={() => increaseCartQuantity(dataProduct.id)}
                 >
                   Aggiungi al carrello +
                 </Button>
@@ -65,14 +77,22 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                     className="d-flex align-items-center justify-content-center"
                     style={{ gap: ".5 rem" }}
                   >
-                    <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                    <Button
+                      onClick={() => decreaseCartQuantity(dataProduct.id)}
+                    >
+                      -
+                    </Button>
                     <div>
                       <span className="fs-3">{quantity}</span> nel carrello
                     </div>
-                    <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                    <Button
+                      onClick={() => increaseCartQuantity(dataProduct.id)}
+                    >
+                      +
+                    </Button>
                   </div>
                   <Button
-                    onClick={() => removeFromCart(id)}
+                    onClick={() => removeFromCart(dataProduct.id)}
                     variant="danger"
                     size="sm"
                   >
