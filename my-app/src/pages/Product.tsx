@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 type StoreItemProps = {
   id: number;
@@ -32,50 +32,93 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
 
   return (
     <>
-      <div>Home to {dataProduct.name} </div>
-      <br />
-
-      <Card
+      <div
         style={{
-          flexDirection: "row",
+          display: "flex",
+          alignItems: "baseline",
+          gap: 6,
+          fontSize: 22,
+        }}
+      >
+        <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
+          Home
+        </Link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+        </svg>
+        {dataProduct.name}{" "}
+      </div>
+      <br />
+      <Card
+        className="d-flex flex-column flex-sm-row "
+        style={{
+          justifyContent: "center",
           width: "100%",
           backgroundColor: "transparent",
           border: "0px",
         }}
       >
-        <Card.Img
-          variant="top"
-          style={{ width: "380px", height: "460px", marginLeft: "20px" }}
-          src={dataProduct.imgUrl}
-        />
-        <Card.Body>
+        <div style={{ width: "100%" }}>
+          <Card.Img
+            variant="top"
+            style={{ width: "100%", height: "460px", borderRadius: 25 }}
+            src={dataProduct.imgUrl}
+          />
+        </div>
+
+        <Card.Body
+          style={{
+            width: "100%",
+            display: "flex",
+          }}
+        >
           <Card.Title
             style={{
               marginLeft: "50px",
               display: "flex",
               flexDirection: "column",
+              width: "100%",
             }}
           >
-            <span className="fs-2">{dataProduct.name}</span>
+            <span className="fs-2 mb-4">{dataProduct.name}</span>
 
-            <span className="fs-4">{dataProduct.price} </span>
-            <span className="fs-6">disponibile in stock</span>
-            <div className="mt-auto d-flex  flex-column">
+            <span className="fs-4 mb-4">{dataProduct.price} </span>
+            <span className="fs-6 mb-4">Availability : In stock</span>
+            <div className="d-flex  flex-column">
               {quantity === 0 ? (
                 <Button
-                  className="w-50"
+                  style={{ borderRadius: 25, height: 50, marginTop: 50 }}
+                  className="w-70"
                   onClick={() => increaseCartQuantity(dataProduct.id)}
                 >
-                  Aggiungi al carrello +
+                  <span>Add to cart</span>
+                  <svg
+                    style={{
+                      color: "white",
+                      width: 25,
+                      height: 25,
+                      marginLeft: 10,
+                    }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <g>
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M6 9h13.938l.5-2H8V5h13.72a1 1 0 0 1 .97 1.243l-2.5 10a1 1 0 0 1-.97.757H5a1 1 0 0 1-1-1V4H2V2h3a1 1 0 0 1 1 1v6zm0 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                        fill="white"
+                      ></path>
+                    </g>
+                  </svg>
                 </Button>
               ) : (
                 <div
                   className="d-flex align-items-center flex-column"
-                  style={{ gap: ".5 rem" }}
+                  style={{ gap: 20 }}
                 >
                   <div
                     className="d-flex align-items-center justify-content-center"
-                    style={{ gap: ".5 rem" }}
+                    style={{ gap: 20 }}
                   >
                     <Button
                       onClick={() => decreaseCartQuantity(dataProduct.id)}
@@ -83,7 +126,9 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                       -
                     </Button>
                     <div>
-                      <span className="fs-3">{quantity}</span> nel carrello
+                      <span className="fs-0">
+                        {quantity} Product in the cart
+                      </span>
                     </div>
                     <Button
                       onClick={() => increaseCartQuantity(dataProduct.id)}
@@ -107,7 +152,11 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
 
       <br />
       <br />
-
+      <div
+        style={{
+          border: "0.5px solid #dee2e6",
+        }}
+      ></div>
       <Card
         style={{
           flexDirection: "column",
@@ -115,9 +164,18 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
           height: "100%",
           backgroundColor: "transparent",
           border: "0px",
+          marginTop: "20px",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          className="flex-column flex-sm-row flex-md-wrap"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 20,
+            alignItems: "center",
+          }}
+        >
           <Card.Img
             variant="top"
             style={{ width: "300px", height: "150px" }}
@@ -157,7 +215,10 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
             }}
           >
             <br />
-            <h3 style={{ textAlign: "center" }}>Descrizione</h3>
+            <div
+              style={{ border: "0.5px solid #dee2e6", marginBottom: 20 }}
+            ></div>
+            <h3 style={{ textAlign: "center" }}>Description</h3>
             <br />
             <p className="fs-6">
               Atterrata d’emergenza su un pianeta alieno e sconosciuto, Selena,
