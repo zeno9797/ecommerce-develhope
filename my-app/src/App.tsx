@@ -13,10 +13,9 @@ function App() {
     <>
       <ShoppingCartProvider>
         <Navbar />
-        <Container className="mb-4">
+        <Container className="mb-5">
           <Routes>
             <Route path="/" element={<Store />} />
-            {/* <Route path="/product" element={<Product id={0} name={''} price={0} imgUrl={''} />} /> */}
             <Route
               path="/product/:n"
               element={<Product id={0} name={""} price={0} imgUrl={""} />}

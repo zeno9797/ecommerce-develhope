@@ -34,7 +34,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
             variant="top"
             src={imgUrl}
             height="250px"
-            style={{ objectFit: "cover" }}
+            // style={{ objectFit: "cover" }}
           />
         </Link>
         <Card.Body className="d-flex flex-column">
