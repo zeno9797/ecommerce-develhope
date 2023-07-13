@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Offcanvas, Stack, Button } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json"
@@ -11,10 +11,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()
 
     return (
+        
         <Offcanvas show={isOpen} onHide={closeCart} placement="end">
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
-                    cart
+                    Il tuo carrello 
                 </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -30,7 +31,14 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                         }, 0)}€
                     </div>
                 </Stack>
+                <Button className="w-50 mt-5"
+                style={{
+                    marginLeft: "25%"
+                }}>
+                    Procedi all'ordine
+                </Button>
             </Offcanvas.Body>
         </Offcanvas>
+        
     )
 }

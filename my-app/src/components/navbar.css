@@ -1,0 +1,38 @@
+.input-up {
+  width: 350px;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.login-btn {
+  margin-right: 40px;
+}
+
+
+
+
+@media (max-width: 400px) {
+  .input-up {
+    width: 150px;
+    margin-left: 10px;
+  }
+
+  .nav {
+    margin-right: 0px;
+  }
+
+  .login-btn {
+    margin-right: 5px;
+  }
+
+
+  .login-text {
+    display: none
+  }
+
+
+}
+
