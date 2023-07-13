@@ -10,26 +10,23 @@ const Store = () => {
   return (
     <>
       <Carousel
-
         style={{
-          height: "420px",
-
+          height: "480px",
+          width: "1920px",
+          margin: "0 auto",
+          marginLeft: -310,
         }}>
         <Carousel.Item
 
           style={{
-            height: "420px",
             objectFit: "cover",
-            width: 'full'
           }} >
-            
+
           <Link
             to='./product'
           >
-            <div className="carousel-item active"
-              style={{ marginTop: "-80px", }}
-            >
-              <img src="http://localhost:3000/imgs/cyberpunk.jpg"
+            <div className="carousel-item active">
+              <img src="http://localhost:3000/imgs/cyberpunk.png"
                 className="d-block w-100"
                 alt="cyberpunk" />
             </div>
@@ -39,15 +36,19 @@ const Store = () => {
 
         </Carousel.Item>
         <Carousel.Item style={{
-          height: "420px",
+          height: "480px",
+          objectFit: "cover",
         }}>
           <Link
             to='./product'
           >
             <div className="carousel-item active"
-              style={{ marginTop: "-140px", }}
+              style={{
+                width: '100%',
+
+              }}
             >
-              <img src="http://localhost:3000/imgs/diablo.jpg"
+              <img src="http://localhost:3000/imgs/diablo.png"
                 className="d-block w-100"
                 alt="diablo" />
             </div>
@@ -55,16 +56,19 @@ const Store = () => {
         </Carousel.Item>
 
         <Carousel.Item style={{
-          height: "420px",
+          height: "480px",
+          objectFit: "cover",
 
         }}>
           <Link
             to='./product'
           >
             <div className="carousel-item active"
-              style={{ marginTop: "-20px", }}
+              style={{
+                width: '100%',
+              }}
             >
-              <img src="http://localhost:3000/imgs/elder.jpg"
+              <img src="http://localhost:3000/imgs/kakarot.png"
                 className="d-block w-100"
                 alt="elder" />
             </div>
@@ -72,15 +76,19 @@ const Store = () => {
 
         </Carousel.Item>
 
-        <Carousel.Item style={{
-          height: "420px",
+        {/* <Carousel.Item style={{
+         height: "480px",
+         objectFit: "cover",
 
         }}>
           <Link
             to='./product'
           >
             <div className="carousel-item active"
-              style={{ marginTop: "-60px", }}
+              style={{ 
+                width: '100%',
+                marginTop: "-60px",
+               }}
             >
               <img src="http://localhost:3000/imgs/fifa.jpg"
                 className="d-block w-100"
@@ -91,13 +99,17 @@ const Store = () => {
         </Carousel.Item>
 
         <Carousel.Item style={{
-          height: "420px",
+         height: "480px",
+         objectFit: "cover",
         }}>
           <Link
             to='./product'
           >
             <div className="carousel-item active"
-              style={{ marginTop: "-20px", }}
+              style={{ 
+                width: '100%',
+                marginTop: "-20px",
+               }}
             >
               <img src="http://localhost:3000/imgs/ragnarok.jpg"
                 className="d-block w-100"
@@ -105,8 +117,9 @@ const Store = () => {
             </div>
           </Link>
 
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
+     
       <br />
       <br />
       <h1> PRODOTTI </h1>
