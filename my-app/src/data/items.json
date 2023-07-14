@@ -26,7 +26,7 @@
         "name": "Nome gioco 4",
         "price": 50.99,
         "imgUrl":"/imgs/4.png",
-        "platform": "Xbox ONE"
+        "platform": "Xbox X/S"
     },
     {
         "id":5,
@@ -43,17 +43,17 @@
         "platform": "PS4"
     },
     {
-        "id":1,
+        "id":7,
         "name": "Nome gioco 1",
         "price": 50.99,
         "imgUrl":"/imgs/1.jpg",
         "platform": "Xbox series X/S"
     },
     {
-        "id":2,
+        "id":8,
         "name": "Nome gioco 2",
         "price": 50.99,
         "imgUrl":"/imgs/2.jpg",
-        "platform": "Xbox ONE"
+        "platform": "Xbox one"
     }
 ]
