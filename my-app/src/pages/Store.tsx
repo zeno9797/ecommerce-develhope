@@ -5,6 +5,9 @@ import { Row, Col } from "react-bootstrap"
 import { StoreItem } from '../components/StoreItem'
 import Carousel from "react-bootstrap/Carousel"
 import { Link } from 'react-router-dom'
+import cyber from "../components/carousel-imgs/cyberpunk.png"
+import dbz from "../components/carousel-imgs/kakarot.png"
+import diablo from "../components/carousel-imgs/diablo.png"
 
 type PropsType = {
   searchString: string
@@ -25,7 +28,7 @@ const Store = ({ searchString }: PropsType) => {
             to='./product'
           >
             <div className="carousel-item active">
-              <img src="http://localhost:3001/imgs/cyberpunk.png"
+              <img src={cyber}
                 className="d-block w-100"
                 alt="cyberpunk" />
             </div>
@@ -47,7 +50,7 @@ const Store = ({ searchString }: PropsType) => {
 
               }}
             >
-              <img src="http://localhost:3001/imgs/diablo.png"
+              <img src={diablo}
                 className="d-block w-100"
                 alt="diablo" />
             </div>
@@ -67,7 +70,7 @@ const Store = ({ searchString }: PropsType) => {
                 width: '100%',
               }}
             >
-              <img src="http://localhost:3001/imgs/kakarot.png"
+              <img src={dbz}
                 className="d-block w-100"
                 alt="elder" />
             </div>
