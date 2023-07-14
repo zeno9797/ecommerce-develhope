@@ -16,6 +16,7 @@ export function Input() {
     function handleClick() {
         const filteredData = data.filter((item) => item.name.includes(input));
         setFilter(filteredData);
+        console.log(filteredData)
     }
 
     return (

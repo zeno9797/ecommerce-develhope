@@ -60,7 +60,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
       >
         <Card.Img
           variant="top"
-          style={{ width: "370px", height: "400px", marginLeft: "20px" }}
+          style={{width: "65%", marginLeft: "18%", marginTop: "10px"}}
           src={dataProduct.imgUrl}
         />
         <Card.Body>
@@ -74,7 +74,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
           >
             <span className="fs-2 mb-4">{dataProduct.name}</span>
 
-            <span className="fs-4 mb-4">{dataProduct.price} </span>
+            <span className="fs-4 mb-4">{dataProduct.price} € </span>
             <span className="fs-6 mb-4">Availability : In stock</span>
             <div className="d-flex  flex-column">
               {quantity === 0 ? (
@@ -105,7 +105,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                 </Button>
               ) : (
                 <div
-                  className="d-flex align-items-center flex-column"
+                  className="d-flex align-items-center flex-column "
                   style={{ gap: 20 }}
                 >
                   <div
