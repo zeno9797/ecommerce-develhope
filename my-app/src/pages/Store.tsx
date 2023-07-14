@@ -11,10 +11,7 @@ const Store = () => {
     <>
       <Carousel
         style={{
-          height: "480px",
-          width: "1920px",
-          margin: "0 auto",
-          marginLeft: -310,
+         
         }}>
         <Carousel.Item
 
@@ -36,7 +33,7 @@ const Store = () => {
 
         </Carousel.Item>
         <Carousel.Item style={{
-          height: "480px",
+          
           objectFit: "cover",
         }}>
           <Link
@@ -56,7 +53,7 @@ const Store = () => {
         </Carousel.Item>
 
         <Carousel.Item style={{
-          height: "480px",
+         
           objectFit: "cover",
 
         }}>
@@ -75,49 +72,6 @@ const Store = () => {
           </Link>
 
         </Carousel.Item>
-
-        {/* <Carousel.Item style={{
-         height: "480px",
-         objectFit: "cover",
-
-        }}>
-          <Link
-            to='./product'
-          >
-            <div className="carousel-item active"
-              style={{ 
-                width: '100%',
-                marginTop: "-60px",
-               }}
-            >
-              <img src="http://localhost:3000/imgs/fifa.jpg"
-                className="d-block w-100"
-                alt="fifa" />
-            </div>
-          </Link>
-
-        </Carousel.Item>
-
-        <Carousel.Item style={{
-         height: "480px",
-         objectFit: "cover",
-        }}>
-          <Link
-            to='./product'
-          >
-            <div className="carousel-item active"
-              style={{ 
-                width: '100%',
-                marginTop: "-20px",
-               }}
-            >
-              <img src="http://localhost:3000/imgs/ragnarok.jpg"
-                className="d-block w-100"
-                alt="ragnarok" />
-            </div>
-          </Link>
-
-        </Carousel.Item> */}
       </Carousel>
      
       <br />
@@ -125,7 +79,7 @@ const Store = () => {
       <h1> PRODOTTI </h1>
       <br />
 
-      <Row md={2} xs={1} lg={4} className='g-5'>
+      <Row md={2} xs={2} lg={4} className='g-5'>
         {storeItems.map(item => (
           <Col key={item.id}>
             <StoreItem {...item} />

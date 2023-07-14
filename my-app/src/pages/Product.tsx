@@ -45,7 +45,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
       >
         <Card.Img
           variant="top"
-          style={{ width: "380px", height: "460px", marginLeft: "20px" }}
+          style={{ width: "370px", height: "400px", marginLeft: "20px" }}
           src={dataProduct.imgUrl}
         />
         <Card.Body>
