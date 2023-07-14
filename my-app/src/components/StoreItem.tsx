@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+
 // import storeItems from "../data/items.json";
 
 type StoreItemProps = {
@@ -9,9 +10,10 @@ type StoreItemProps = {
   name: string;
   price: number;
   imgUrl: string;
+  platform: string
 };
 
-export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+export function StoreItem({ id, name, price, imgUrl, platform }: StoreItemProps) {
   const { increaseCartQuantity } = useShoppingCart();
   const [isHovered, setIsHovered] = useState(false);
   
@@ -20,7 +22,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
       <Card
         className="w-100"
         style={{
-          height: "390px",
+          height: "490px",
           transition: "all 0.1s ease",
           ...(isHovered && {
             boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.5)",
@@ -33,8 +35,8 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           <Card.Img
             variant="top"
             src={imgUrl}
-            height="200px"
-            style={{ objectFit: "cover" }}
+            height="280px"
+            style={{width: "65%", marginLeft: "18%", marginTop: "10px"}}
           />
         </Link>
         <Card.Body className="d-flex flex-column">
@@ -42,10 +44,12 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
             className="d-flex justify-content-between align-items-baseline mb-4"
             style={{
               flexDirection: "column",
+              
             }}
           >
             <span className="fs-2">{name}</span>
-            {/* fs = font size */}
+            <span className="fs-5">{platform}</span>
+           
             <span className="ms-2 mt-2 text-muted">{price} €</span>
           </Card.Title>
 

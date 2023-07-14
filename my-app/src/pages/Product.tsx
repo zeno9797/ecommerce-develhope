@@ -80,7 +80,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
               {quantity === 0 ? (
                 <Button
                   style={{ borderRadius: 25, height: 50, marginTop: 50 }}
-                  className="w-70"
+                  className="w-50"
                   onClick={() => increaseCartQuantity(dataProduct.id)}
                 >
                   <span>Add to cart</span>

@@ -4,72 +4,56 @@
         "id":1,
         "name": "Tekken 7",
         "price": 29.98,
-        "imgUrl":"/imgs/tekken.jpg"
+        "imgUrl":"/imgs/tekken7.jpg",
+        "platform": "PS5"
     },
     {
         "id":2,
         "name": "Diablo IV",
         "price": 49.98,
-        "imgUrl":"/imgs/diablo1.png"
+        "imgUrl":"/imgs/diablo.jpg",
+        "platform": "PS5"
     },
     {
         "id":3,
         "name": "GTA V",
         "price": 30.99,
-        "imgUrl":"/imgs/gta.webp"
+        "imgUrl":"/imgs/gtav.jpg",
+        "platform": "Xbox one"
     },
     {
         "id":4,
         "name": "Nome gioco 4",
         "price": 50.99,
-        "imgUrl":"/imgs/4.png"
+        "imgUrl":"/imgs/4.png",
+        "platform": "Xbox ONE"
     },
     {
         "id":5,
         "name": "Nome gioco 5",
         "price": 50.99,
-        "imgUrl":"/imgs/1.jpg"
+        "imgUrl":"/imgs/1.jpg",
+        "platform": "PS5"
     },
     {
         "id":6,
         "name": "Nome gioco 6",
         "price": 50.99,
-        "imgUrl":"/imgs/2.jpg"
+        "imgUrl":"/imgs/2.jpg",
+        "platform": "PS4"
     },
     {
         "id":1,
         "name": "Nome gioco 1",
         "price": 50.99,
-        "imgUrl":"/imgs/1.jpg"
+        "imgUrl":"/imgs/1.jpg",
+        "platform": "Xbox series X/S"
     },
     {
         "id":2,
         "name": "Nome gioco 2",
         "price": 50.99,
-        "imgUrl":"/imgs/2.jpg"
-    },
-    {
-        "id":3,
-        "name": "Nome gioco 3",
-        "price": 50.99,
-        "imgUrl":"/imgs/3.jpg"
-    },
-    {
-        "id":4,
-        "name": "Nome gioco 4",
-        "price": 50.99,
-        "imgUrl":"/imgs/4.png"
-    },
-    {
-        "id":5,
-        "name": "Nome gioco 5",
-        "price": 50.99,
-        "imgUrl":"/imgs/1.jpg"
-    },
-    {
-        "id":6,
-        "name": "Nome gioco 6",
-        "price": 50.99,
-        "imgUrl":"/imgs/2.jpg"
+        "imgUrl":"/imgs/2.jpg",
+        "platform": "Xbox ONE"
     }
 ]
