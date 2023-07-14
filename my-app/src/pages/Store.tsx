@@ -16,7 +16,10 @@ type PropsType = {
 const Store = ({ searchString }: PropsType) => {
   return (
     <>
+    <h2 className='fw-bold'>In <span className='text-danger fs-1 fw-bold'>evidenza</span></h2>
+    <br />
       <Carousel
+      className='h-100 bg-danger'
         >
         <Carousel.Item
 
@@ -78,10 +81,12 @@ const Store = ({ searchString }: PropsType) => {
 
         </Carousel.Item>
       </Carousel>
+              <br />
+              <hr />
 
+      
       <br />
-      <br />
-      <h1> PRODOTTI </h1>
+      <h2 className='fw-bold'>Video<span className='text-danger fw-bold'>Games</span></h2>
       <br />
 
       <Row md={2} xs={1} lg={4} className='g-5'>

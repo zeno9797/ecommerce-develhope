@@ -19,6 +19,7 @@ function App() {
     <>
       <ShoppingCartProvider>
         <Navbar  updateSearch={setSearchString}/>
+        
         <Container className="mb-5">
           <Routes>
             <Route path="/" element={<Store searchString={searchString} />} />
