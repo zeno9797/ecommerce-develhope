@@ -16,11 +16,11 @@ type PropsType = {
 const Store = ({ searchString }: PropsType) => {
   return (
     <>
-    <h2 className='fw-bold'>In <span className='text-danger fs-1 fw-bold'>evidenza</span></h2>
-    <br />
+      <h2 className='fw-bold'>In <span className='text-danger fs-1 fw-bold'>evidenza</span></h2>
+      <br />
       <Carousel
-      className='h-100 bg-danger'
-        >
+        className='h-100 bg-danger'
+      >
         <Carousel.Item
 
           style={{
@@ -81,25 +81,68 @@ const Store = ({ searchString }: PropsType) => {
 
         </Carousel.Item>
       </Carousel>
-              <br />
-              <hr />
+      <br />
+      <hr />
 
-      
+
       <br />
       <h2 className='fw-bold'>Video<span className='text-danger fw-bold'>Games</span></h2>
       <br />
 
-      <Row md={2} xs={1} lg={4} className='g-5'>
-        {storeItems.map(item => {
-          if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
-            return (<Col key={item.id}>
-              <StoreItem {...item} />
-            </Col>)
-          } else {
-          return (<> </>)}
-        })}
+      <Carousel className='
+      pb-5' interval={null} variant='dark' controls={false}>
+        <Carousel.Item>
+          <Row md={2} xs={1} lg={4} className='g-5'>
+            {storeItems.map(item => {
+              if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
+                return (<Col key={item.id}>
+                  <StoreItem {...item} />
+                </Col>)
+              } else {
+                return (<> </>)
+              }
+            })}
 
-      </Row>
+          </Row>
+
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Row md={2} xs={1} lg={4} className='g-5'>
+            {storeItems.map(item => {
+              if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
+                return (<Col key={item.id}>
+                  <StoreItem {...item} />
+                </Col>)
+              } else {
+                return (<> </>)
+              }
+            })}
+            
+
+          </Row>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Row md={2} xs={1} lg={4} className='g-5'>
+            {storeItems.map(item => {
+              if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
+                return (<Col key={item.id}>
+                  <StoreItem {...item} />
+                  
+                </Col>)
+                
+              } else {
+                return (<> </>)
+              }
+            })}
+
+          </Row>
+        </Carousel.Item>
+
+      </Carousel>
+
+
     </>
 
   )

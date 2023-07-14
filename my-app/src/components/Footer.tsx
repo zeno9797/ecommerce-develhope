@@ -21,7 +21,7 @@ export default function Footer() {
     <div>
       <footer className="text-center text-lg-start bg-white text-muted">
         {/* Section: Social media */}
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-danger text-white">
           {/* Left */}
           <div className="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
@@ -30,22 +30,22 @@ export default function Footer() {
 
           {/* Right */}
           <div>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faGoogle} />
             </a>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="/" className="me-4 link-secondary">
+            <a href="/" className="me-4 link-secondary text-white">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
