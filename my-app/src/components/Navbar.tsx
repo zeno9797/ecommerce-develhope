@@ -4,8 +4,13 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Input } from "./Input";
 import "./navbar.css";
 
+type PropsType = {
+  updateSearch: (param1: string) => void
+}
 
-export function Navbar() {
+
+
+export function Navbar({updateSearch}: PropsType) {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
 
@@ -18,7 +23,7 @@ export function Navbar() {
           </Nav.Link>
         </Nav>
         <div className="w-25">
-          <Input />
+          <Input updateSearch={updateSearch}/>
         </div>
 
         <div className="nav">

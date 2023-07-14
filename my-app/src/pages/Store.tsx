@@ -6,12 +6,16 @@ import { StoreItem } from '../components/StoreItem'
 import Carousel from "react-bootstrap/Carousel"
 import { Link } from 'react-router-dom'
 
-const Store = () => {
+type PropsType = {
+  searchString: string
+}
+
+const Store = ({ searchString }: PropsType) => {
   return (
     <>
       <Carousel
         style={{
-         
+
         }}>
         <Carousel.Item
 
@@ -33,7 +37,7 @@ const Store = () => {
 
         </Carousel.Item>
         <Carousel.Item style={{
-          
+
           objectFit: "cover",
         }}>
           <Link
@@ -53,7 +57,7 @@ const Store = () => {
         </Carousel.Item>
 
         <Carousel.Item style={{
-         
+
           objectFit: "cover",
 
         }}>
@@ -73,18 +77,21 @@ const Store = () => {
 
         </Carousel.Item>
       </Carousel>
-     
+
       <br />
       <br />
       <h1> PRODOTTI </h1>
       <br />
 
       <Row md={2} xs={1} lg={4} className='g-5'>
-        {storeItems.map(item => (
-          <Col key={item.id}>
-            <StoreItem {...item} />
-          </Col>
-        ))}
+        {storeItems.map(item => {
+          if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
+            return (<Col key={item.id}>
+              <StoreItem {...item} />
+            </Col>)
+          } else {
+          return (<> </>)}
+        })}
 
       </Row>
     </>
