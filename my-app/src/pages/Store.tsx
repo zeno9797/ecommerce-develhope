@@ -14,9 +14,7 @@ const Store = ({ searchString }: PropsType) => {
   return (
     <>
       <Carousel
-        style={{
-
-        }}>
+        >
         <Carousel.Item
 
           style={{
@@ -27,7 +25,7 @@ const Store = ({ searchString }: PropsType) => {
             to='./product'
           >
             <div className="carousel-item active">
-              <img src="http://localhost:3000/imgs/cyberpunk.png"
+              <img src="http://localhost:3001/imgs/cyberpunk.png"
                 className="d-block w-100"
                 alt="cyberpunk" />
             </div>
@@ -49,7 +47,7 @@ const Store = ({ searchString }: PropsType) => {
 
               }}
             >
-              <img src="http://localhost:3000/imgs/diablo.png"
+              <img src="http://localhost:3001/imgs/diablo.png"
                 className="d-block w-100"
                 alt="diablo" />
             </div>
@@ -69,7 +67,7 @@ const Store = ({ searchString }: PropsType) => {
                 width: '100%',
               }}
             >
-              <img src="http://localhost:3000/imgs/kakarot.png"
+              <img src="http://localhost:3001/imgs/kakarot.png"
                 className="d-block w-100"
                 alt="elder" />
             </div>
