@@ -20,10 +20,10 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
       <Card
         className="w-100"
         style={{
-          height: "420px",
-          transition: "all 0.3s ease",
+          height: "390px",
+          transition: "all 0.1s ease",
           ...(isHovered && {
-            boxShadow: "2px 4px 4px rgba(0, 0, 0, 0.2)",
+            boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.5)",
           }),
         }}
         onMouseEnter={() => setIsHovered(true)}
@@ -33,8 +33,8 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           <Card.Img
             variant="top"
             src={imgUrl}
-            height="250px"
-            // style={{ objectFit: "cover" }}
+            height="200px"
+            style={{ objectFit: "cover" }}
           />
         </Link>
         <Card.Body className="d-flex flex-column">
@@ -46,7 +46,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           >
             <span className="fs-2">{name}</span>
             {/* fs = font size */}
-            <span className="ms-2 text-muted">{price} €</span>
+            <span className="ms-2 mt-2 text-muted">{price} €</span>
           </Card.Title>
 
           <div className="mt-auto d-flex align-items-center flex-column">

@@ -2,21 +2,21 @@
     {
         
         "id":1,
-        "name": "tekken",
-        "price": 50.99,
-        "imgUrl":"/imgs/1.jpg"
+        "name": "Tekken 7",
+        "price": 29.98,
+        "imgUrl":"/imgs/tekken.jpg"
     },
     {
         "id":2,
-        "name": "gta",
-        "price": 50.99,
-        "imgUrl":"/imgs/2.jpg"
+        "name": "Diablo IV",
+        "price": 49.98,
+        "imgUrl":"/imgs/diablo1.png"
     },
     {
         "id":3,
-        "name": "Nome gioco 3",
-        "price": 50.99,
-        "imgUrl":"/imgs/3.jpg"
+        "name": "GTA V",
+        "price": 30.99,
+        "imgUrl":"/imgs/gta.webp"
     },
     {
         "id":4,

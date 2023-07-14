@@ -11,9 +11,6 @@ const Store = () => {
     <>
       <Carousel
         style={{
-          
-
-
          
         }}>
         <Carousel.Item
@@ -75,8 +72,6 @@ const Store = () => {
           </Link>
 
         </Carousel.Item>
-
-        
       </Carousel>
      
       <br />

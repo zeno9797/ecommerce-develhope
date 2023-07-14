@@ -58,20 +58,12 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
           border: "0px",
         }}
       >
-        <div style={{ width: "100%" }}>
-          <Card.Img
-            variant="top"
-            style={{ width: "100%", height: "460px", borderRadius: 25 }}
-            src={dataProduct.imgUrl}
-          />
-        </div>
-
-        <Card.Body
-          style={{
-            width: "100%",
-            display: "flex",
-          }}
-        >
+        <Card.Img
+          variant="top"
+          style={{ width: "370px", height: "400px", marginLeft: "20px" }}
+          src={dataProduct.imgUrl}
+        />
+        <Card.Body>
           <Card.Title
             style={{
               marginLeft: "50px",
