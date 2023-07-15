@@ -28,7 +28,7 @@ export function Input({updateSearch}: PropsType) {
     return (
         <div
             style={{
-                marginLeft: "-30px",
+                marginLeft: "-50px",
                 width: "400px",
             }}
             className="d-flex g-5"

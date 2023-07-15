@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Input } from "./Input";
 import "./navbar.css";
+import logo from "./logo2.png"
+import logo2 from "./logo.png"
 
 type PropsType = {
   updateSearch: (param1: string) => void
@@ -14,12 +16,13 @@ export function Navbar({updateSearch}: PropsType) {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
 
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4 pb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4">
 
       <Container>
         <Nav className="d-flex">
           <Nav.Link to="/" as={NavLink}>
-            LOGO
+            <img className="logo1" src={logo} alt="" style={{width: "130px", height: "60px"}}/>
+            <img className="logo2" src={logo2} alt="" style={{width: "50px", height: "50px"}}/>
           </Nav.Link>
         </Nav>
         <div className="w-25">

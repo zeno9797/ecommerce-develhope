@@ -1,3 +1,7 @@
+.logo2 {
+  display: none
+}
+
 .input-up {
   width: 350px;
   border-radius: 20px;
@@ -46,9 +50,18 @@ button.order-btn:hover {
 
 
 @media (max-width: 400px) {
+  .logo1 {
+    display: none
+  }
+  
+  .logo2 {
+    display: block
+  }
+  
+
   .input-up {
     width: 150px;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
   .nav {
@@ -64,6 +77,19 @@ button.order-btn:hover {
     display: none
   }
 
+
+}
+
+
+@media (max-width: 850px) {
+  .logo1 {
+    display: none
+  }
+  
+  .logo2 {
+    display: block;
+    
+  }
 
 }
 
