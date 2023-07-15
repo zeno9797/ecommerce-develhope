@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 import cyber from "../components/carousel-imgs/cyberpunk.png"
 import dbz from "../components/carousel-imgs/kakarot.png"
 import diablo from "../components/carousel-imgs/diablo.png"
+import Product from './Product'
+
 
 type PropsType = {
   searchString: string
@@ -28,7 +30,7 @@ const Store = ({ searchString }: PropsType) => {
           }} >
 
           <Link
-            to='./product'
+            to='./product/6'
           >
             <div className="carousel-item active">
               <img src={cyber}
@@ -45,7 +47,7 @@ const Store = ({ searchString }: PropsType) => {
           objectFit: "cover",
         }}>
           <Link
-            to='./product'
+            to={`/product/2`}
           >
             <div className="carousel-item active"
               style={{
@@ -66,7 +68,7 @@ const Store = ({ searchString }: PropsType) => {
 
         }}>
           <Link
-            to='./product'
+            to='./product/5'
           >
             <div className="carousel-item active"
               style={{
@@ -75,7 +77,7 @@ const Store = ({ searchString }: PropsType) => {
             >
               <img src={dbz}
                 className="d-block w-100"
-                alt="elder" />
+                alt="dbz" />
             </div>
           </Link>
 

@@ -11,7 +11,38 @@
   margin-right: 40px;
 }
 
+/* Storeitem buttons */
+button.custom-btn {
+  background-color: #fff;
+  color: red;
+  border: 1px solid #fff;
+  padding: 10px;
+}
 
+button.custom-btn:hover {
+  background-color: #e81e25 !important;
+  color: #fff !important;
+}
+/* Storeitem buttons */  
+
+
+/* 
+ShoppingCart button */
+button.order-btn {
+  background-color: #e81e25;
+  color: #fff;
+ 
+}
+button.order-btn:hover {
+  background-color: #e81e25 ;
+  color: #fff ;
+}
+/* ShoppingCart button */ 
+
+/* footer css */
+.custom-section{
+  background-color: #e81e25;
+}
 
 
 @media (max-width: 400px) {

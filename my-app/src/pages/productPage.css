@@ -1,0 +1,32 @@
+button.prd-btn {
+    background-color: #fff;
+    color: red;
+    border: 1px solid #fff;
+    padding: 10px;
+  }
+  
+  button.prd-btn:hover {
+    background-color: #e81e25 !important;
+    color: #fff !important;
+  }
+
+  button.add-btn{
+    background-color: white;
+  }
+
+  button.add-btn:hover {
+    background-color: #e81e25;
+    color: #e81e25;
+    cursor: pointer;
+  }
+
+  .add-text{
+    color: #e81e25;
+   
+  }
+
+  button.add-btn:hover span {
+    color: white !important;
+  
+  }
+

@@ -3,6 +3,7 @@ import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
 import { useParams, Link } from "react-router-dom";
+import './productPage.css'
 
 type StoreItemProps = {
   id: number;
@@ -60,7 +61,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
       >
         <Card.Img
           variant="top"
-          style={{width: "15%", marginLeft: "18%", marginTop: "10px"}}
+          style={{ width: "15%", marginLeft: "18%", marginTop: "10px" }}
           src={dataProduct.imgUrl}
         />
         <Card.Body>
@@ -79,8 +80,13 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
             <div className="d-flex  flex-column">
               {quantity === 0 ? (
                 <Button
-                  style={{ borderRadius: 25, height: 50, marginTop: 50 }}
-                  className="w-50"
+                  style={{
+                    borderRadius: 25,
+                    height: 50,
+                    marginTop: 50,
+                    border: '1px solid red',
+                  }}
+                  className="w-50 prd-btn"
                   onClick={() => increaseCartQuantity(dataProduct.id)}
                 >
                   <span>Add to cart</span>
@@ -113,9 +119,16 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                     style={{ gap: 20 }}
                   >
                     <Button
+                    style={{
+                       
+                      border: '1px solid red',
+                       }}
+                    className="add-btn"
                       onClick={() => decreaseCartQuantity(dataProduct.id)}
                     >
-                      -
+                      <span
+                      className="add-text"
+                      >-</span>
                     </Button>
                     <div>
                       <span className="fs-0">
@@ -123,9 +136,16 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                       </span>
                     </div>
                     <Button
+                     className="add-btn"
+                      style={{
+                       
+                        border: '1px solid red',
+                         }}
                       onClick={() => increaseCartQuantity(dataProduct.id)}
                     >
-                      +
+                      <span
+                      className="add-text"
+                      >+</span>
                     </Button>
                   </div>
                   <Button

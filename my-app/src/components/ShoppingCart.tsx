@@ -31,9 +31,12 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                         }, 0)}€
                     </div>
                 </Stack>
-                <Button className="w-50 mt-5"
+                <Button 
+                className="w-50 mt-5 order-btn"
                 style={{
-                    marginLeft: "25%"
+                    marginLeft: "25%",
+                    border: '1px solid red'
+                    
                 }}>
                     Procedi all'ordine
                 </Button>

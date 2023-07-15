@@ -31,17 +31,17 @@
     {
         
         "id":5,
-        "name": "Tekken 7",
-        "price": 29.98,
-        "imgUrl":"/imgs/tekken7.jpg",
+        "name": "Dragon Ball Z Kakarot",
+        "price": 30.98,
+        "imgUrl":"/imgs/kakarot.jpg",
         "platform": "PS5"
     },
     {
         "id":6,
-        "name": "Diablo IV",
-        "price": 49.98,
-        "imgUrl":"/imgs/diablo.jpg",
-        "platform": "PS5"
+        "name": "Cyberpunk",
+        "price": 47.99,
+        "imgUrl":"/imgs/cyberpunk.jpg",
+        "platform": "Xbox one"
     },
     {
         "id":7,
