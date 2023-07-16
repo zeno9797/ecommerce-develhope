@@ -3,14 +3,14 @@
         
         "id":1,
         "name": "Tekken 7",
-        "price": 29.98,
+        "price": 29.99,
         "imgUrl":"/imgs/tekken7.jpg",
         "platform": "PS5"
     },
     {
         "id":2,
         "name": "Diablo IV",
-        "price": 49.98,
+        "price": 49.99,
         "imgUrl":"/imgs/diablo.jpg",
         "platform": "PS5"
     },
