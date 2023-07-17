@@ -10,9 +10,10 @@ type StoreItemProps = {
   name: string;
   price: number;
   imgUrl: string;
+  platform: string;
 };
 
-export function Product({ id, name, price, imgUrl }: StoreItemProps) {
+export function Product({ id, name, price, imgUrl, platform }: StoreItemProps) {
   const { n } = useParams();
   const [products, setProducts] = useState(storeItems);
 
@@ -62,7 +63,10 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
         <Card.Img
           variant="top"
           className="card-img-smartphone"
-          style={{ width: "25%", marginLeft: "18%", marginTop: "10px" }}
+          style={{
+            marginLeft: "15%",
+            marginTop: "10px",
+          }}
           src={dataProduct.imgUrl}
         />
         <Card.Body>
@@ -74,9 +78,9 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
               width: "100%",
             }}
           >
-            <span className="fs-2 mb-4">{dataProduct.name}</span>
+            <span className="fs-2 mb-4 fw-bold">{dataProduct.name}</span>
 
-            <span className="fs-4 mb-4">{dataProduct.price} € </span>
+            <span className="fs-2 mb-4">{dataProduct.price} € </span>
             <span className="fs-6 mb-4">
               Disponibile in store
               <svg
@@ -96,6 +100,9 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                   <path d="M504.969,83.262c-4.532-4.538-10.563-7.037-16.98-7.037s-12.448,2.499-16.978,7.034l-7.161,7.161   c-3.124,3.124-3.124,8.189,0,11.313c3.124,3.123,8.19,3.124,11.314-0.001l7.164-7.164c1.51-1.512,3.52-2.344,5.66-2.344   s4.15,0.832,5.664,2.348c1.514,1.514,2.348,3.524,2.348,5.663s-0.834,4.149-2.348,5.663L217.802,381.75   c-1.51,1.512-3.52,2.344-5.66,2.344s-4.15-0.832-5.664-2.348L98.747,274.015c-1.514-1.514-2.348-3.524-2.348-5.663   c0-2.138,0.834-4.149,2.351-5.667c1.51-1.512,3.52-2.344,5.66-2.344s4.15,0.832,5.664,2.348l96.411,96.411   c1.5,1.5,3.535,2.343,5.657,2.343s4.157-0.843,5.657-2.343l234.849-234.849c3.125-3.125,3.125-8.189,0-11.314   c-3.124-3.123-8.189-3.123-11.313,0L212.142,342.129l-90.75-90.751c-4.533-4.538-10.563-7.037-16.98-7.037   s-12.448,2.499-16.978,7.034c-4.536,4.536-7.034,10.565-7.034,16.977c0,6.412,2.498,12.441,7.034,16.978l107.728,107.728   c4.532,4.538,10.563,7.037,16.98,7.037c6.417,0,12.448-2.499,16.977-7.033l275.847-275.848c4.536-4.536,7.034-10.565,7.034-16.978   S509.502,87.794,504.969,83.262z" />
                 </g>
               </svg>
+            </span>
+            <span style={{ marginBottom: 14 }}>
+              Platform: {dataProduct.platform}
             </span>
             <div className="d-flex  flex-column">
               {quantity === 0 ? (
@@ -153,7 +160,7 @@ export function Product({ id, name, price, imgUrl }: StoreItemProps) {
                       <span className="add-text">-</span>
                     </Button>
                     <div>
-                      <span className="fs-0">
+                      <span className="fs-6">
                         {quantity} Prodotto/i nel carrello
                       </span>
                     </div>

@@ -9,26 +9,24 @@ import Footer from "./components/Footer";
 import { Input } from "./components/Input";
 import { Login } from "./pages/Login";
 
-
 function App() {
-  const [searchString, setSearchString] = useState<string>("")
+  const [searchString, setSearchString] = useState<string>("");
 
-  
-
-  
   return (
     <>
       <ShoppingCartProvider>
-        <Navbar  updateSearch={setSearchString}/>
-        
+        <Navbar updateSearch={setSearchString} />
+
         <Container className="mb-5">
           <Routes>
             <Route path="/" element={<Store searchString={searchString} />} />
             <Route
               path="/product/:n"
-              element={<Product id={0} name={""} price={0} imgUrl={""} />}
+              element={
+                <Product id={0} name={""} price={0} imgUrl={""} platform={""} />
+              }
             />
-            <Route path="/user" element={<Login/>}/>
+            <Route path="/user" element={<Login />} />
           </Routes>
         </Container>
         <Footer />

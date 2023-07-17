@@ -32,6 +32,9 @@ button.add-btn:hover {
   .container-remove {
     margin-left: -50%;
   }
+  .card-img-smartphone {
+    width: 25% !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -42,6 +45,9 @@ button.add-btn:hover {
   .svg-cart {
     display: none;
   }
+  .card-img-smartphone {
+    width: 40% !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -51,5 +57,11 @@ button.add-btn:hover {
   }
   .svg-cart {
     display: none;
+  }
+  .container-remove {
+    margin-left: -20%;
+  }
+  .card-img-smartphone {
+    width: 75% !important;
   }
 }
