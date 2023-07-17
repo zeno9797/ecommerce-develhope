@@ -1,60 +1,51 @@
 [
-    {
-        
-        "id":1,
-        "name": "Tekken 7",
-        "price": 29.99,
-        "imgUrl":"/imgs/tekken7.jpg",
-        "platform": "PS5"
-    },
-    {
-        "id":2,
-        "name": "Diablo IV",
-        "price": 49.99,
-        "imgUrl":"/imgs/diablo.jpg",
-        "platform": "PS5"
-    },
-    {
-        "id":3,
-        "name": "GTA V",
-        "price": 30.99,
-        "imgUrl":"/imgs/gtav.jpg",
-        "platform": "Xbox one"
-    },
-    {
-        "id":4,
-        "name": "Far Cry 6",
-        "price": 50.99,
-        "imgUrl":"/imgs/farcry6.jpg",
-        "platform": "Xbox X/S"
-    },
-    {
-        
-        "id":5,
-        "name": "Dragon Ball Z Kakarot",
-        "price": 30.98,
-        "imgUrl":"/imgs/kakarot.jpg",
-        "platform": "PS5"
-    },
-    {
-        "id":6,
-        "name": "Cyberpunk",
-        "price": 47.99,
-        "imgUrl":"/imgs/cyberpunk.jpg",
-        "platform": "Xbox one"
-    },
-    {
-        "id":7,
-        "name": "GTA V",
-        "price": 30.99,
-        "imgUrl":"/imgs/gtav.jpg",
-        "platform": "Xbox one"
-    },
-    {
-        "id":8,
-        "name": "Far Cry 6",
-        "price": 50.99,
-        "imgUrl":"/imgs/farcry6.jpg",
-        "platform": "Xbox X/S"
-    }
+  {
+    "id": 1,
+    "name": "Tekken 7",
+    "price": 29.99,
+    "imgUrl": "/imgs/tekken7.jpg",
+    "platform": "PS5"
+  },
+  {
+    "id": 2,
+    "name": "Diablo IV",
+    "price": 49.99,
+    "imgUrl": "/imgs/diablo.jpg",
+    "platform": "PS5"
+  },
+  {
+    "id": 3,
+    "name": "GTA V",
+    "price": 30.99,
+    "imgUrl": "/imgs/gtav.jpg",
+    "platform": "Xbox one"
+  },
+  {
+    "id": 4,
+    "name": "Far Cry 6",
+    "price": 50.99,
+    "imgUrl": "/imgs/farcry6.jpg",
+    "platform": "Xbox X/S"
+  },
+  {
+    "id": 5,
+    "name": "Dragon Ball Z Kakarot",
+    "price": 30.98,
+    "imgUrl": "/imgs/kakarot.jpg",
+    "platform": "PS5"
+  },
+  {
+    "id": 6,
+    "name": "Cyberpunk",
+    "price": 47.99,
+    "imgUrl": "/imgs/cyberpunk.jpg",
+    "platform": "Xbox one"
+  },
+  {
+    "id": 7,
+    "name": "GTA V",
+    "price": 30.99,
+    "imgUrl": "/imgs/gtav.jpg",
+    "platform": "Xbox one"
+  }
 ]
