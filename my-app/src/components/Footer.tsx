@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "./loghi/logo.png";
 import {
   faFacebookF,
   faTwitter,
@@ -21,10 +22,12 @@ export default function Footer() {
     <div>
       <footer className="text-center text-lg-start bg-white text-muted">
         {/* Section: Social media */}
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 
+        <section
+          className="d-flex justify-content-center justify-content-lg-between p-4
         border-bottom text-white
         custom-section
-        ">
+        "
+        >
           {/* Left */}
           <div className="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
@@ -65,11 +68,11 @@ export default function Footer() {
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 {/* Content */}
                 <h6 className="text-uppercase fw-bold mb-4">
-                  <FontAwesomeIcon
-                    icon={faGem}
-                    className="me-3 text-secondary"
+                  <img
+                    src={logo}
+                    style={{ width: 25, height: 25, marginRight: 2 }}
                   />
-                  WeGaming
+                  GameStore
                 </h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </div>
