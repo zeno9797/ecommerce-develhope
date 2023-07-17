@@ -74,7 +74,7 @@ export default function Footer() {
                   />
                   GameStore
                 </h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Game store negozio online di giochi</p>
               </div>
               {/* Grid column */}
 

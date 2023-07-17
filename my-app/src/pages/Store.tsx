@@ -91,9 +91,7 @@ const Store = ({ searchString }: PropsType) => {
       <h2 className='fw-bold'>Video<span className='text-danger fw-bold'>Games</span></h2>
       <br />
 
-      <Carousel className='
-      pb-5' interval={null} variant='dark' controls={false}>
-        <Carousel.Item>
+     
           <Row md={2} xs={1} lg={4} className='g-5'>
             {storeItems.map(item => {
               if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
@@ -107,43 +105,9 @@ const Store = ({ searchString }: PropsType) => {
 
           </Row>
 
-        </Carousel.Item>
+        
 
-        <Carousel.Item>
-          <Row md={2} xs={1} lg={4} className='g-5'>
-            {storeItems.map(item => {
-              if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
-                return (<Col key={item.id}>
-                  <StoreItem {...item} />
-                </Col>)
-              } else {
-                return (<> </>)
-              }
-            })}
-            
-
-          </Row>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Row md={2} xs={1} lg={4} className='g-5'>
-            {storeItems.map(item => {
-              if (item.name.toLowerCase().includes(searchString.toLowerCase()) || searchString == "") {
-                return (<Col key={item.id}>
-                  <StoreItem {...item} />
-                  
-                </Col>)
-                
-              } else {
-                return (<> </>)
-              }
-            })}
-
-          </Row>
-        </Carousel.Item>
-
-      </Carousel>
-
+        
 
     </>
 
