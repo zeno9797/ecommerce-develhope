@@ -11,9 +11,13 @@ type StoreItemProps = {
   price: number;
   imgUrl: string;
   platform: string;
+  img1: string;
+  img2: string;
+  img3: string;
+  img4: string;
 };
 
-export function Product({ id, name, price, imgUrl, platform }: StoreItemProps) {
+export function Product({ id, name, price, imgUrl, platform, img1, img2, img3, img4 }: StoreItemProps) {
   const { n } = useParams();
   const [products, setProducts] = useState(storeItems);
 
@@ -21,7 +25,7 @@ export function Product({ id, name, price, imgUrl, platform }: StoreItemProps) {
     return item.id === Number(n);
   }) as StoreItemProps;
 
-  console.log(dataProduct.name);
+  
 
   const {
     getItemQuantity,
@@ -218,28 +222,29 @@ export function Product({ id, name, price, imgUrl, platform }: StoreItemProps) {
             variant="top"
             style={{ width: "300px", height: "150px" }}
             src={
-              "https://www.gamingtalker.it/wp-content/uploads/2020/09/returnal-cover-art-800x1024.jpg"
+              dataProduct.img1
             }
           />
           <Card.Img
             variant="top"
             style={{ width: "300px", height: "150px" }}
             src={
-              "https://www.gamingtalker.it/wp-content/uploads/2020/09/returnal-cover-art-800x1024.jpg"
+              dataProduct.img2
             }
           />
           <Card.Img
             variant="top"
             style={{ width: "300px", height: "150px" }}
             src={
-              "https://www.gamingtalker.it/wp-content/uploads/2020/09/returnal-cover-art-800x1024.jpg"
+              dataProduct.img3
             }
+            
           />
           <Card.Img
             variant="top"
             style={{ width: "300px", height: "150px" }}
             src={
-              "https://www.gamingtalker.it/wp-content/uploads/2020/09/returnal-cover-art-800x1024.jpg"
+              dataProduct.img4
             }
           />
         </div>

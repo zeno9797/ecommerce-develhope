@@ -23,7 +23,7 @@ function App() {
             <Route
               path="/product/:n"
               element={
-                <Product id={0} name={""} price={0} imgUrl={""} platform={""} />
+                <Product id={0} name={""} price={0} imgUrl={""} platform={""} img1={""} img2={""} img3={""} img4={""} />
               }
             />
             <Route path="/user" element={<Login />} />

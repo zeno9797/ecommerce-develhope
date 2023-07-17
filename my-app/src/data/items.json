@@ -4,62 +4,98 @@
     "name": "Tekken 7",
     "price": 29.99,
     "imgUrl": "/imgs/tekken7.jpg",
-    "platform": "PS5"
+    "platform": "PS5",
+    "img1": "/imgs/tekken/tekken1.jpg",
+    "img2": "/imgs/tekken/tekken2.jpg",
+    "img3": "/imgs/tekken/tekken3.jpg",
+    "img4": "/imgs/tekken/tekken4.jpg"
   },
   {
     "id": 2,
     "name": "Diablo IV",
     "price": 49.99,
     "imgUrl": "/imgs/diablo.jpg",
-    "platform": "PS5"
+    "platform": "PS5",
+    "img1": "/imgs/diablo/diablo1.jpg",
+    "img2": "/imgs/diablo/diablo2.jpg",
+    "img3": "/imgs/diablo/diablo3.jpg",
+    "img4": "/imgs/diablo/diablo4.jpg"
   },
   {
     "id": 3,
     "name": "GTA V",
     "price": 30.99,
     "imgUrl": "/imgs/gtav.jpg",
-    "platform": "Xbox one"
+    "platform": "Xbox one",
+    "img1": "/imgs/gta/gta1.jpg",
+    "img2": "/imgs/gta/gta2.jpg",
+    "img3": "/imgs/gta/gta3.jpg",
+    "img4": "/imgs/gta/gta4.jpg"
   },
   {
     "id": 4,
     "name": "Far Cry 6",
     "price": 50.99,
     "imgUrl": "/imgs/farcry6.jpg",
-    "platform": "Xbox X/S"
+    "platform": "Xbox X/S",
+    "img1": "/imgs/farcry/farcry1.jpg",
+    "img2": "/imgs/farcry/farcry2.jpg",
+    "img3": "/imgs/farcry/farcry3.jpg",
+    "img4": "/imgs/farcry/farcry4.jpg"
   },
   {
     "id": 5,
     "name": "Dragon Ball Z Kakarot",
     "price": 30.98,
     "imgUrl": "/imgs/kakarot.jpg",
-    "platform": "PS5"
+    "platform": "PS5",
+    "img1": "/imgs/dbz/kakarot1.jpg",
+    "img2": "/imgs/dbz/kakarot2.jpg",
+    "img3": "/imgs/dbz/kakarot3.jpg",
+    "img4": "/imgs/dbz/kakarot4.jpg"
   },
   {
     "id": 6,
     "name": "Cyberpunk",
     "price": 47.99,
     "imgUrl": "/imgs/cyberpunk.jpg",
-    "platform": "Xbox one"
+    "platform": "Xbox one",
+    "img1": "/imgs/cyber/cyberpunk1.jpg",
+    "img2": "/imgs/cyber/cyberpunk2.jpg",
+    "img3": "/imgs/cyber/cyberpunk3.webp",
+    "img4": "/imgs/cyber/cyberpunk4.jpg"
   },
   {
     "id": 7,
     "name": "Fifa 23",
     "price": 47.99,
     "imgUrl": "/imgs/fifa.jpg",
-    "platform": "Xbox X/S"
+    "platform": "Xbox X/S",
+    "img1": "/imgs/fifa/fifa1.jpg",
+    "img2": "/imgs/fifa/fifa2.jpg",
+    "img3": "/imgs/fifa/fifa3.jpg",
+    "img4": "/imgs/fifa/fifa4.jpg"
   },
   {
     "id": 8,
     "name": "Hogwarts Legacy",
     "price": 47.99,
     "imgUrl": "/imgs/hogwarts.jpg",
-    "platform": "PS5"
+    "platform": "PS5",
+    "img1": "/imgs/potter/potter1.jpg",
+    "img2": "/imgs/potter/potter2.jpg",
+    "img3": "/imgs/potter/potter3.jpg",
+    "img4": "/imgs/potter/potter4.jpg"
   },
   {
     "id": 9,
     "name": "Street Fighter",
     "price": 47.99,
     "imgUrl": "/imgs/street-fighter.jpg",
-    "platform": "PS5"
+    "platform": "PS5",
+    "img1": "/imgs/street/streetfighter1.jpg",
+    "img2": "/imgs/street/streetfighter3.jpg",
+    "img3": "/imgs/street/streetfighter2.jpg",
+    "img4": "/imgs/street/streetfighter4.jpg"
   }
 ]
