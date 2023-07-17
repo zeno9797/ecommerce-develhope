@@ -36,11 +36,17 @@ button.add-btn:hover {
     width: 45%;
     margin: auto;
   }
+  .svg-cart {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
   .form-user {
     width: 55%;
     margin: auto;
+  }
+  .svg-cart {
+    display: none;
   }
 }
