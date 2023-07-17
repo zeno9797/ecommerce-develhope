@@ -1,32 +1,29 @@
 button.prd-btn {
-    background-color: #fff;
-    color: red;
-    border: 1px solid #fff;
-    padding: 10px;
-  }
-  
-  button.prd-btn:hover {
-    background-color: #e81e25 !important;
-    color: #fff !important;
-  }
+  background-color: #fff;
+  color: red;
+  border: 1px solid #fff;
+  padding: 10px;
+}
 
-  button.add-btn{
-    background-color: white;
-  }
+button.prd-btn:hover {
+  background-color: #e81e25 !important;
+  color: #fff !important;
+}
 
-  button.add-btn:hover {
-    background-color: #e81e25;
-    color: #e81e25;
-    cursor: pointer;
-  }
+button.add-btn {
+  background-color: white;
+}
 
-  .add-text{
-    color: #e81e25;
-   
-  }
+button.add-btn:hover {
+  background-color: #e81e25;
+  color: #e81e25;
+  cursor: pointer;
+}
 
-  button.add-btn:hover span {
-    color: white !important;
-  
-  }
+.add-text {
+  color: #e81e25;
+}
 
+button.add-btn:hover span {
+  color: white !important;
+}
