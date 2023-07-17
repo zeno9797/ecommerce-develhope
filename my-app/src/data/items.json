@@ -43,9 +43,23 @@
   },
   {
     "id": 7,
-    "name": "GTA V",
-    "price": 30.99,
-    "imgUrl": "/imgs/gtav.jpg",
-    "platform": "Xbox one"
+    "name": "Fifa 23",
+    "price": 47.99,
+    "imgUrl": "/imgs/fifa.jpg",
+    "platform": "Xbox X/S"
+  },
+  {
+    "id": 8,
+    "name": "Hogwarts Legacy",
+    "price": 47.99,
+    "imgUrl": "/imgs/hogwarts.jpg",
+    "platform": "PS5"
+  },
+  {
+    "id": 9,
+    "name": "Street Fighter",
+    "price": 47.99,
+    "imgUrl": "/imgs/street-fighter.jpg",
+    "platform": "PS5"
   }
 ]
