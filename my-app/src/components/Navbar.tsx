@@ -1,8 +1,13 @@
 import { Button, Nav, Container, Navbar as NavbarBs } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Input } from "./Input";
 import "./navbar.css";
+import logo from "./loghi/logo2.png"
+import logo2 from "./loghi/logo.png"
+import sony from "./loghi/logo-ps.png"
+import xbox from "./loghi/logo-xbox.png"
 
 type PropsType = {
   updateSearch: (param1: string) => void
@@ -10,36 +15,41 @@ type PropsType = {
 
 
 
-export function Navbar({updateSearch}: PropsType) {
+export function Navbar({ updateSearch }: PropsType) {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
 
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4 pb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-4">
 
       <Container>
-        <Nav className="d-flex">
+        <Nav className="d-flex" >
           <Nav.Link to="/" as={NavLink}>
-            LOGO
+            <img className="logo1" src={logo} alt="" style={{ width: "130px", height: "60px" }} />
+            <img className="logo2" src={logo2} alt="" style={{ width: "50px", height: "50px" }} />
+            {/* <img className="logo1" src={sony} alt="" style={{width: "30px", height: "30px", marginLeft:"30px"}}/>
+            <img className="logo1" src={xbox} alt="" style={{width: "40px", height: "40px", marginLeft:"20px"}}/> */}
           </Nav.Link>
         </Nav>
         <div className="w-25">
-          <Input updateSearch={updateSearch}/>
+          <Input updateSearch={updateSearch} />
         </div>
 
         <div className="nav">
-          <Button
-            className="rounded-circle login-btn"
-            variant="outline-white"
-            style={{ width: "3rem", height: "3rem", position: "relative" }}>
-            <svg viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.1992 12C14.9606 12 17.1992 9.76142 17.1992 7C17.1992 4.23858 14.9606 2 12.1992 2C9.43779 2 7.19922 4.23858 7.19922 7C7.19922 9.76142 9.43779 12 12.1992 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M3 22C3.57038 20.0332 4.74796 18.2971 6.3644 17.0399C7.98083 15.7827 9.95335 15.0687 12 15C16.12 15 19.63 17.91 21 22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <h6 
-            className="login-text"
-            style={{marginLeft: "-7px"}}
-            >Login</h6>
-          </Button>
+          <Link to="/user" style={{ textDecoration: "none" }}>
+            <Button
+              className="rounded-circle login-btn"
+              variant="outline-white"
+              style={{ width: "3rem", height: "3rem", position: "relative" }}>
+              <svg viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.1992 12C14.9606 12 17.1992 9.76142 17.1992 7C17.1992 4.23858 14.9606 2 12.1992 2C9.43779 2 7.19922 4.23858 7.19922 7C7.19922 9.76142 9.43779 12 12.1992 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3 22C3.57038 20.0332 4.74796 18.2971 6.3644 17.0399C7.98083 15.7827 9.95335 15.0687 12 15C16.12 15 19.63 17.91 21 22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <h6
+                className="login-text"
+                style={{ marginLeft: "-7px", color: "black" }}
+              >Login</h6>
+            </Button>
+          </Link>
           {cartQuantity > -1 && (
             <Button
               onClick={openCart}

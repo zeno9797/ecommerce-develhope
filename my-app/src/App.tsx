@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import Footer from "./components/Footer";
 import { Input } from "./components/Input";
+import { Login } from "./pages/Login";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               path="/product/:n"
               element={<Product id={0} name={""} price={0} imgUrl={""} />}
             />
+            <Route path="/user" element={<Login/>}/>
           </Routes>
         </Container>
         <Footer />
