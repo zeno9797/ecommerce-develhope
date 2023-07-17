@@ -29,6 +29,9 @@ button.add-btn:hover {
     width: 25%;
     margin-left: 34%;
   }
+  .container-remove {
+    margin-left: -50%;
+  }
 }
 
 @media (max-width: 900px) {
