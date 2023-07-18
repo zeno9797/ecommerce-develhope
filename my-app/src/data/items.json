@@ -98,4 +98,16 @@
     "img3": "/imgs/street/streetfighter2.jpg",
     "img4": "/imgs/street/streetfighter4.jpg"
   }
+  ,
+  {
+    "id": 10,
+    "name": "Marvel's Spider-Man 2",
+    "price": 69.99,
+    "imgUrl": "/imgs/spiderman.jpg",
+    "platform": "PS5",
+    "img1": "/imgs/spiderman/spiderman1.jpg",
+    "img2": "/imgs/spiderman/spiderman3.jpg",
+    "img3": "/imgs/spiderman/spiderman2.jpg",
+    "img4": "/imgs/spiderman/spiderman4.jpg"
+  }
 ]

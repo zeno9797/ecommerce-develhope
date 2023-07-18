@@ -40,7 +40,7 @@ export function Login() {
           }}
           className="prd-btn"
         >
-          Submit
+          Login
         </Button>
       </form>
     </>
