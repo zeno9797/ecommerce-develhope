@@ -1,6 +1,20 @@
 [
     {
-        "username" : "",
-        "password":""
+        "username" : "gizeno",
+        "password":"1234",
+        "img": "",
+        "name":"Giuseppe"
+    }, 
+    {
+        "username" : "alepicc",
+        "password":"1234",
+        "img": "",
+        "name":"Alessandro"
+    }, 
+    {
+        "username" : "peoli",
+        "password":"1234",
+        "img": "",
+        "name":"Peppe"
     }
 ]

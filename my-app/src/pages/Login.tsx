@@ -2,6 +2,13 @@ import { Button } from "react-bootstrap";
 import "./productPage.css";
 
 export function Login() {
+
+  async function loginUser() {
+    const res = await fetch("http://localhost:3000/login", {method: "POST", body: {username: }})
+    
+  }
+
+
   return (
     <>
       <form
@@ -39,6 +46,9 @@ export function Login() {
             border: "1px solid red",
           }}
           className="prd-btn"
+          onClick={
+
+          }
         >
           Login
         </Button>
