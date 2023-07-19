@@ -155,6 +155,7 @@ export function Product({ id, name, price, imgUrl, platform, img1, img2, img3, i
                     style={{ gap: 20 }}
                   >
                     <Button
+                     variant="danger"
                       style={{
                         border: "1px solid red",
                       }}
@@ -169,6 +170,7 @@ export function Product({ id, name, price, imgUrl, platform, img1, img2, img3, i
                       </span>
                     </div>
                     <Button
+                     variant="danger"
                       className="add-btn"
                       style={{
                         border: "1px solid red",
