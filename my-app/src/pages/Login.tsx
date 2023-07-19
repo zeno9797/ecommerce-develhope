@@ -1,13 +1,49 @@
+import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./productPage.css";
 
 export function Login() {
+  const [usernameInput, setUsernameInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+  const [loginMessage, setLoginMessage] = useState("");
 
-  async function loginUser() {
-    const res = await fetch("http://localhost:3000/login", {method: "POST", body: {username: }})
-    
+  function handleUsername(event: React.ChangeEvent<HTMLInputElement>) {
+    const inputUser = event.target.value;
+    setUsernameInput(inputUser);
   }
 
+  function handlePassword(event: React.ChangeEvent<HTMLInputElement>) {
+    const inputPass = event.target.value;
+    setPasswordInput(inputPass);
+  }
+
+  async function loginUser() {
+    try {
+      const res = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: usernameInput,
+          password: passwordInput,
+        }),
+      });
+      const json = await res.json();
+      if (res.ok) {
+        setLoginMessage("Benvenuto su Game Store!");
+      } else {
+        setLoginMessage("Non sei autorizzato.");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function handleLogin(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    loginUser();
+  }
 
   return (
     <>
@@ -20,10 +56,14 @@ export function Login() {
           height: "40vh",
           marginTop: "50px",
         }}
+        onSubmit={handleLogin}
       >
         <h3 style={{ textAlign: "center" }}>Inserisci i tuoi dati</h3>
         <input
           type="text"
+          name="username"
+          value={usernameInput}
+          onChange={handleUsername}
           style={{
             padding: "6px",
             borderRadius: "5px",
@@ -33,6 +73,8 @@ export function Login() {
         />
         <input
           type="password"
+          value={passwordInput}
+          onChange={handlePassword}
           style={{
             padding: "6px",
             borderRadius: "5px",
@@ -46,12 +88,11 @@ export function Login() {
             border: "1px solid red",
           }}
           className="prd-btn"
-          onClick={
-
-          }
+          type="submit"
         >
           Login
         </Button>
+        {loginMessage && <p>{loginMessage}</p>}
       </form>
     </>
   );
