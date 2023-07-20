@@ -99,7 +99,8 @@ export function Login() {
           Login
         </Button>
         {loginMessage && (
-          <p style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}>
+          <p className="text-danger"
+           style={{ fontSize: 24, fontWeight: "bold", textAlign: "center"}}>
             {loginMessage}
           </p>
         )}
