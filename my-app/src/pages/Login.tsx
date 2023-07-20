@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./productPage.css";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleUsername(event: React.ChangeEvent<HTMLInputElement>) {
     const inputUser = event.target.value;
@@ -34,9 +34,10 @@ export function Login() {
       });
       const json = await res.json();
       if (res.ok) {
-        setLoginMessage("Benvenuto su Game Store!")
-        navigate("/")
-        
+        setLoginMessage("Benvenuto su Game Store!");
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       } else {
         setLoginMessage("Non sei autorizzato.");
       }
@@ -92,17 +93,17 @@ export function Login() {
             borderRadius: 5,
             border: "1px solid red",
           }}
-         
           className="prd-btn"
           type="submit"
         >
           Login
         </Button>
-        {loginMessage && <p>{loginMessage}</p>}
+        {loginMessage && (
+          <p style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}>
+            {loginMessage}
+          </p>
+        )}
       </form>
     </>
   );
 }
-
-
-
