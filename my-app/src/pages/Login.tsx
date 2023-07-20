@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./productPage.css";
+import {useNavigate } from "react-router-dom";
 
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+
+  const navigate = useNavigate()
 
   function handleUsername(event: React.ChangeEvent<HTMLInputElement>) {
     const inputUser = event.target.value;
@@ -31,7 +34,9 @@ export function Login() {
       });
       const json = await res.json();
       if (res.ok) {
-        setLoginMessage("Benvenuto su Game Store!");
+        setLoginMessage("Benvenuto su Game Store!")
+        navigate("/")
+        
       } else {
         setLoginMessage("Non sei autorizzato.");
       }
@@ -87,6 +92,7 @@ export function Login() {
             borderRadius: 5,
             border: "1px solid red",
           }}
+         
           className="prd-btn"
           type="submit"
         >
@@ -97,3 +103,6 @@ export function Login() {
     </>
   );
 }
+
+
+
