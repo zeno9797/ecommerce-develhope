@@ -9,7 +9,7 @@ export function Login() {
   const [passwordInput, setPasswordInput] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   function handleUsername(event: React.ChangeEvent<HTMLInputElement>) {
     const inputUser = event.target.value;
@@ -23,7 +23,7 @@ export function Login() {
 
   async function loginUser() {
     try {
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch("http://localhost:3000/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,12 +33,11 @@ export function Login() {
           password: passwordInput,
         }),
       });
-      const json = await res.json();
       if (res.ok) {
         setLoginMessage("Benvenuto su Game Store!");
-        setTimeout(() => {
-          navigate("/");
-        }, 1500);
+        // setTimeout(() => {
+        //   navigate("/");
+        // }, 1500);
       } else {
         setLoginMessage("Non sei autorizzato.");
       }
