@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./productPage.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
@@ -88,6 +89,9 @@ export function Login() {
           }}
           placeholder="password"
         />
+        <Link to="/signup">
+          <span>Registrati</span>
+        </Link>
         <Button
           style={{
             borderRadius: 5,
@@ -99,8 +103,10 @@ export function Login() {
           Login
         </Button>
         {loginMessage && (
-          <p className="text-danger"
-            style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}>
+          <p
+            className="text-danger"
+            style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}
+          >
             {loginMessage}
           </p>
         )}
