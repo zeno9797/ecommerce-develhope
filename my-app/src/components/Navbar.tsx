@@ -6,8 +6,8 @@ import { Input } from "./Input";
 import "./navbar.css";
 import logo from "./loghi/logo2.png"
 import logo2 from "./loghi/logo.png"
-import sony from "./loghi/logo-ps.png"
-import xbox from "./loghi/logo-xbox.png"
+import { u } from "../pages/Login"
+import { useState, useEffect } from "react";
 
 type PropsType = {
   updateSearch: (param1: string) => void
@@ -15,6 +15,12 @@ type PropsType = {
 
 export function Navbar({ updateSearch }: PropsType) {
   const { openCart, cartQuantity } = useShoppingCart();
+  const [username, setUsername] : any = useState(u)
+
+  useEffect(() => {
+    setUsername(u);
+  }, []);
+  
   return (
 
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-4">
@@ -46,9 +52,9 @@ export function Navbar({ updateSearch }: PropsType) {
               <h6
                 className="login-text"
                 style={{ marginLeft: "-7px", color: "black" }}
-              >Login</h6>
-            </Button>
-          </Link>
+              >{username}</h6>
+            </Button> 
+          </Link> 
           {cartQuantity > -1 && (
             <Button
               onClick={openCart}
