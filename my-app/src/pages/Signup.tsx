@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./productPage.css";
+import { useNavigate } from "react-router-dom";
 
 export function Signup() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function handleUsername(event: React.ChangeEvent<HTMLInputElement>) {
     const inputUser = event.target.value;
@@ -32,12 +33,12 @@ export function Signup() {
         }),
       });
       if (res.ok) {
-        setLoginMessage("Benvenuto su Game Store!");
-        // setTimeout(() => {
-        //   navigate("/");
-        // }, 1500);
+        setLoginMessage("Ti sei registrato con successo!");
+        setTimeout(() => {
+          navigate("/user");
+        }, 1500);
       } else {
-        setLoginMessage("Non sei autorizzato.");
+        setLoginMessage("Nome utente già esistente");
       }
     } catch (error) {
       console.error(error);
@@ -90,7 +91,7 @@ export function Signup() {
           className="prd-btn"
           type="submit"
         >
-          Login
+          Registrati
         </Button>
         {loginMessage && (
           <p

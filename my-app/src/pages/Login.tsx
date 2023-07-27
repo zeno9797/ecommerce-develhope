@@ -4,7 +4,7 @@ import "./productPage.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-let u = ""
+let u = "";
 
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
@@ -40,9 +40,9 @@ export function Login() {
         setTimeout(() => {
           navigate("/");
         }, 1500);
-        u = usernameInput
+        u = usernameInput;
       } else {
-        setLoginMessage("Non sei autorizzato.");
+        setLoginMessage("Nome utente o password errati.");
       }
     } catch (error) {
       console.error(error);
@@ -56,7 +56,6 @@ export function Login() {
 
   return (
     <>
-    
       <form
         className="form-user"
         style={{
@@ -118,4 +117,4 @@ export function Login() {
   );
 }
 
-export { u }
+export { u };
