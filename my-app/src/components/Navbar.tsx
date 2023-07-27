@@ -19,7 +19,7 @@ export function Navbar({ updateSearch }: PropsType) {
 
   useEffect(() => {
     setUsername(u);
-  }, []);
+  }, [u]); 
   
   return (
 
