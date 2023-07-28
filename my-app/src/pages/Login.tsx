@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Nav } from "react-bootstrap";
 import "./productPage.css";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,16 @@ export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
+  const [userLog, setUserLog] = useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken")
+    if (token !== null) {
+      setUserLog(true)
+    } else {
+      setUserLog(false)
+    }
+  }, [])
 
   const navigate = useNavigate();
 
@@ -37,6 +47,7 @@ export function Login() {
       });
       if (res.ok) {
         setLoginMessage("Benvenuto su Game Store!");
+        localStorage.setItem("accessToken", "guanoajca")
         setTimeout(() => {
           navigate("/");
         }, 1500);
