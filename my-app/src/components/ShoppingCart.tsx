@@ -2,13 +2,14 @@ import { Offcanvas, Stack, Button } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json";
+import { Link } from "react-router-dom";
 
 type ShoppingCartProps = {
   isOpen: boolean;
 };
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { closeCart, cartItems } = useShoppingCart();
+  const { closeCart, cartItems, cartQuantity } = useShoppingCart();
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -21,16 +22,18 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CartItem key={item.id} {...item} />
           ))}
           <br />
-          <div className="ms-auto fw-bold fs-5">
+          {cartQuantity === 0 ? (<> </>) : (<div className="ms-auto fw-bold fs-5">
             Importo totale:{" "}
             {cartItems.reduce((total, cartItem) => {
               const item = storeItems.find((i) => i.id === cartItem.id);
               return total + (item?.price || 0) * cartItem.quantity;
             }, 0)}
             €
-          </div>
+          </div>)}
+          
         </Stack>
-        <Button
+        {cartQuantity === 0 ? (<h3>Il tuo carrello è vuoto</h3>) : 
+        (<Link to="/checkout"><Button
           variant="danger"
           className="w-50 mt-5 order-btn"
           style={{
@@ -39,7 +42,8 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           }}
         >
           Procedi all'ordine
-        </Button>
+        </Button> </Link>)}
+        
       </Offcanvas.Body>
     </Offcanvas>
   );

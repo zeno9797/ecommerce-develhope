@@ -6,9 +6,10 @@ import Store from "./pages/Store";
 import { Navbar } from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import Footer from "./components/Footer";
-import { Input } from "./components/Input";
+import CartForm from "./components/CartForm";
 import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
+
 
 function App() {
   const [searchString, setSearchString] = useState<string>("");
@@ -21,6 +22,7 @@ function App() {
         <Container className="mb-5">
           <Routes>
             <Route path="/" element={<Store searchString={searchString} />} />
+            <Route path="/checkout" element={<CartForm/>} />
             <Route
               path="/product/:n"
               element={
