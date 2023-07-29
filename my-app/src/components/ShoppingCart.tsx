@@ -34,6 +34,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         </Stack>
         {cartQuantity === 0 ? (<h3>Il tuo carrello è vuoto</h3>) : 
         (<Link to="/checkout"><Button
+          onClick={closeCart}
           variant="danger"
           className="w-50 mt-5 order-btn"
           style={{

@@ -2,13 +2,15 @@ import React from 'react'
 import { InputGroup, Form, Button } from 'react-bootstrap'
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
+import { CartItem } from './CartItem';
+
 
 function CartForm() {
     const { closeCart, cartItems } = useShoppingCart();
 
     return (
         <>
-            <div className='d-flex flex-column'>
+            <div>
                 <h6>Card type</h6>
                 svg carte
                 <div>
@@ -16,11 +18,15 @@ function CartForm() {
                     <input type="text" placeholder='Cognome' />
                 </div>
                 <input type="text" placeholder='Indirizzo di spedizione' />
-                <input type="text" placeholder='Card number' />
-                <input type="text" placeholder='Expiration' />
-                <input type="text" placeholder='CVV' />
+
+                <div>
+                    <input type="text" placeholder='Card number' />
+                    <input type="date" placeholder='Scadenza' />
+                    <input type="text" placeholder='CVV' />
+                </div>
 
                 <div className="fw-bold fs-5">
+                    
                     Importo totale:{" "}
                     {cartItems.reduce((total, cartItem) => {
                         const item = storeItems.find((i) => i.id === cartItem.id);
