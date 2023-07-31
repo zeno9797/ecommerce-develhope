@@ -99,7 +99,7 @@ const Store = ({ searchString }: PropsType) => {
       </h2>
       <br />
       <div>
-        <button onClick={handleFilterPS5}>ps5</button>
+        <button onClick={handleFilterPS5}>ps5</button> 
         <button onClick={handleFilterXbox}>xbox</button>
         <button onClick={handleShowAll}>Mostra tutti i giochi</button>
       </div>

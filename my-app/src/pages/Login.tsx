@@ -4,7 +4,7 @@ import "./productPage.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-let u = "";
+
 
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
@@ -51,7 +51,6 @@ export function Login() {
         setTimeout(() => {
           navigate("/");
         }, 1500);
-        u = usernameInput;
       } else {
         setLoginMessage("Nome utente o password errati.");
       }
@@ -128,4 +127,4 @@ export function Login() {
   );
 }
 
-export { u };
+
