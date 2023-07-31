@@ -4,9 +4,9 @@ const db = pgPromise()("postgres://postgres:paperino@localhost:5433/esercizi");
 
 const setupDb = async () => {
   await db.none(`
-        DROP TABLE IF EXISTS users;
+       
 
-        CREATE TABLE users (
+        CREATE TABLE IF NOT EXISTS users (
             id SERIAL NOT NULL PRIMARY KEY,
             username TEXT NOT NULL,
             password TEXT NOT NULL,

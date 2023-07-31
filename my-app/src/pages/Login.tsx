@@ -33,6 +33,11 @@ export function Login() {
     setPasswordInput(inputPass);
   }
 
+  function logoutUser() {
+    setUserLog(false)
+    localStorage.removeItem("accessToken");
+  }
+
   async function loginUser() {
     try {
       const res = await fetch("http://localhost:3000/api/users/login", {
@@ -66,7 +71,7 @@ export function Login() {
 
   return (
     <>
-      <form
+    {userLog == false ? (<form
         className="form-user"
         style={{
           display: "flex",
@@ -122,7 +127,8 @@ export function Login() {
             {loginMessage}
           </p>
         )}
-      </form>
+      </form> ) : (<Button onClick={logoutUser}>Logout</Button> )}
+      
     </>
   );
 }
