@@ -127,7 +127,9 @@ export function Login() {
             {loginMessage}
           </p>
         )}
-      </form> ) : (<Button onClick={logoutUser}>Logout</Button> )}
+      </form> ) : (
+        
+      <Button onClick={logoutUser}>Logout</Button> )}
       
     </>
   );
