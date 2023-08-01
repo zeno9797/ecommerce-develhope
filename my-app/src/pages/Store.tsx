@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import storeItems from '../data/items.json';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { StoreItem } from '../components/StoreItem';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,8 @@ import cyber from '../components/carousel-imgs/cyberpunk.png';
 import dbz from '../components/carousel-imgs/kakarot.png';
 import diablo from '../components/carousel-imgs/diablo.png';
 import Product from './Product';
+import sony from "../components/loghi/logo-ps.png"
+import xboxPng from "../components/loghi/logo-xbox.png"
 
 type PropsType = {
   searchString: string;
@@ -98,10 +100,31 @@ const Store = ({ searchString }: PropsType) => {
         Video<span className='text-danger fw-bold'>Games</span>
       </h2>
       <br />
-      <div>
-        <button onClick={handleFilterPS5}>ps5</button> 
-        <button onClick={handleFilterXbox}>xbox</button>
-        <button onClick={handleShowAll}>Mostra tutti i giochi</button>
+      <div
+      style={{
+        marginBottom: "20px"
+      }}>
+
+        <img
+          style={{
+            width: 50,
+            cursor: 'pointer'
+          }}
+          src={sony} onClick={handleFilterPS5} />
+
+        <img
+          style={{
+            width: 50,
+            cursor: 'pointer',
+            marginLeft: 20,
+            marginRight: 20
+          }}
+          src={xboxPng} onClick={handleFilterXbox} />
+
+        <Button
+          variant='danger'
+         onClick={handleShowAll}>Mostra tutti i giochi</Button>
+
       </div>
       <br />
       <Row md={2} xs={1} lg={4} className='g-5'>
