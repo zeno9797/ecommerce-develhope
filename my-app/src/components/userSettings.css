@@ -1,0 +1,49 @@
+.containerSettings {
+    display: flex;
+    flex-wrap: wrap ;
+    gap: 15px;
+    padding: 20px;
+}
+
+.containerSettings > div {
+    width: 31%;
+    border: 2px solid rgb(239, 66, 66);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.containerSettings div:hover {
+  background-color: rgb(239, 208, 208) ;
+  cursor: pointer;
+}
+
+.svgSettings {
+    color: rgb(239, 66, 66);
+    margin-bottom: 15px;
+}
+
+.logoutButton {
+    margin-left: 580px;
+    height: 50px;
+}
+
+@media (max-width: 900px) {
+    .logoutButton {
+        margin-left: 310px;
+    }
+}
+
+@media (max-width: 400px) {
+    .containerSettings {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerSettings > div {
+        width: 100%;
+    }
+
+    .logoutButton {
+        margin-left: 150px;
+    }
+}
