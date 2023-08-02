@@ -27,10 +27,16 @@ function CartForm() {
 
                 <div className='form-pagamento'>
                     <h4>Metodo di pagamento</h4>
-                    <input type="text" placeholder='Card number' />
+                    <input type="text" 
+                    inputMode="numeric" 
+                    placeholder='Card number'
+                    pattern="[0-9\s]{13,19}"
+                    maxLength={16} />
                     <div>
                         <input type="date" placeholder='Scadenza' />
-                        <input type="text" placeholder='CVV' />
+                        <input type="password"
+                        inputMode="numeric" 
+                        maxLength={3} placeholder='CVV' />
                     </div>
                     <div>
                         <img style={{

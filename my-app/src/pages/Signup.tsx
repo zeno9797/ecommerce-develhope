@@ -57,11 +57,38 @@ export function Signup() {
           display: "flex",
           flexDirection: "column",
           gap: 15,
-          height: "40vh",
+          height: "55vh",
           marginTop: "50px",
         }}
       >
         <h3 style={{ textAlign: "center" }}>Compila i campi per registrarti</h3>
+        <input
+          type="text"
+          style={{
+            padding: "6px",
+            borderRadius: "5px",
+            border: "1px solid black",
+          }}
+          placeholder="Nome"
+        />
+        <input
+          type="text"
+          style={{
+            padding: "6px",
+            borderRadius: "5px",
+            border: "1px solid black",
+          }}
+          placeholder="Cognome"
+        />
+        <input
+          type="email"
+          style={{
+            padding: "6px",
+            borderRadius: "5px",
+            border: "1px solid black",
+          }}
+          placeholder="Email"
+        />
         <input
           onChange={handleUsername}
           type="text"
