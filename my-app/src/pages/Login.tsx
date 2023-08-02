@@ -3,26 +3,19 @@ import { Button, Nav } from "react-bootstrap";
 import "./productPage.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Assistance from "../components/Assistance";
 import { StoreItem } from "../components/StoreItem";
 
-const ao : StoreItemProps = {
-  id: 1,
-  name: "string",
-  price: 2,
-  imgUrl: "string",
-  platform: "string",
- 
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Icon } from "@fortawesome/fontawesome-svg-core";
+import { faTruckFast } from '@fortawesome/free-solid-svg-icons'
+import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHouseUser } from "@fortawesome/free-solid-svg-icons";
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 
-type StoreItemProps = {
-  id: number;
-  name: string;
-  price: number;
-  imgUrl: string;
-  platform: string;
- 
-};
+
+
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -147,8 +140,161 @@ export function Login() {
 
       </form>) : (
         <div>
-          <Assistance {...ao}/>
+          <div>
+            <div className="d-flex justify-content-center">
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
 
+              }}>
+                <div
+                 className="d-flex justify-content-center align-items-center"
+                  // style={{
+                  //   border: "2px solid #e81e25",
+                  //   borderRadius: "50%",
+                  //   width: "100px",
+                  //   height: "100px"
+
+                  // }}
+                >
+                  <FontAwesomeIcon icon={faTruckFast} bounce size="4x" style={{
+                    color: "black",
+                  }} />
+                </div>
+                <h4>Orders</h4>
+                <p>Track, return or re-purchase items</p>
+              </div>
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
+              }}>
+                <div
+                 className="d-flex justify-content-center align-items-center"
+                  // style={{
+                  //   border: "2px solid #e81e25",
+                  //   borderRadius: "50%",
+                  //   width: "100px",
+                  //   height: "100px"
+
+                  // }}
+                >
+                  <FontAwesomeIcon icon={faGear} spin size="4x" style={{
+                    color: "black",
+                  }} />
+                </div>
+                <h4>Access and Security settings</h4>
+                <p>Change login, name and mobile number</p>
+              </div>
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
+              }}>
+                <div
+                 className="d-flex justify-content-center align-items-center"
+                  // style={{
+                  //   border: "2px solid #e81e25",
+                  //   borderRadius: "50%",
+                  //   width: "100px",
+                  //   height: "100px"
+
+                  // }}
+                >
+                  <FontAwesomeIcon icon={faStar} size="4x"
+                    style={{
+                      color: "black",
+                    }}
+                  />
+                </div>
+                <h4>Premium</h4>
+                <p>View benefits and payment settings</p>
+              </div>
+            </div>
+            <div className="d-flex justify-content-center">
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
+              }}>
+                <div
+                 className="d-flex justify-content-center align-items-center"
+                  // style={{
+                  //   border: "2px solid #e81e25",
+                  //   borderRadius: "50%",
+                  //   width: "100px",
+                  //   height: "100px"
+
+                  // }}
+                >
+                  <FontAwesomeIcon icon={faHouseUser} size="4x"
+                    style={{
+                      color: "black",
+                    
+                    }}
+                  />
+                </div>
+                <h4>Addresses</h4>
+                <p>Change addresses and delivery preferences for orders and gifts</p>
+              </div>
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
+              }}>
+                <div
+                 className="d-flex justify-content-center align-items-center"
+                  // style={{
+                  //   border: "2px solid #e81e25",
+                  //   borderRadius: "50%",
+                  //   width: "100px",
+                  //   height: "100px"
+
+                  // }}
+                >
+                  <FontAwesomeIcon icon={faCreditCard} size="4x"
+                    style={{
+                      color: "black",
+                    }}
+                  />
+                </div>
+                <h4>My payments</h4>
+                <p>View all transactions, manage settings and payment methods</p>
+              </div>
+              <div style={{
+                border: "1px solid black",
+                height: "200px",
+                width: "300px",
+                margin: "20px 20px"
+              }}>
+                <div 
+                className="d-flex justify-content-center align-items-center"
+                // style={{
+                //   border: "2px solid #e81e25",
+                //   borderRadius: "50%",
+                //   width: "100px",
+                //   height: "100px"
+
+                // }} 
+                >
+                  <FontAwesomeIcon icon={faHeadphones} size="4x"
+                    style={{
+                      color: "black",
+                    
+                    }}
+                  />
+                </div>
+                <h4>Contact us</h4>
+                <p>Contact our customer service via Phone, Chat or Email</p>
+              </div>
+            </div>
+          </div>
           <Button onClick={logoutUser}>Logout</Button>
         </div>)}
 
