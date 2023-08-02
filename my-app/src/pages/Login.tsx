@@ -3,9 +3,26 @@ import { Button, Nav } from "react-bootstrap";
 import "./productPage.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Assistance from "../components/Assistance";
+import { StoreItem } from "../components/StoreItem";
 
+const ao : StoreItemProps = {
+  id: 1,
+  name: "string",
+  price: 2,
+  imgUrl: "string",
+  platform: "string",
+ 
+};
 
-
+type StoreItemProps = {
+  id: number;
+  name: string;
+  price: number;
+  imgUrl: string;
+  platform: string;
+ 
+};
 export function Login() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -71,7 +88,7 @@ export function Login() {
 
   return (
     <>
-    {userLog == false ? (<form
+      {userLog == false ? (<form
         className="form-user"
         style={{
           display: "flex",
@@ -127,10 +144,14 @@ export function Login() {
             {loginMessage}
           </p>
         )}
-      </form> ) : (
-        
-      <Button onClick={logoutUser}>Logout</Button> )}
-      
+
+      </form>) : (
+        <div>
+          <Assistance {...ao}/>
+
+          <Button onClick={logoutUser}>Logout</Button>
+        </div>)}
+
     </>
   );
 }
