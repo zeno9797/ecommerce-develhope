@@ -57,7 +57,7 @@ export function Signup() {
           display: "flex",
           flexDirection: "column",
           gap: 15,
-          height: "55vh",
+          
           marginTop: "50px",
         }}
       >
