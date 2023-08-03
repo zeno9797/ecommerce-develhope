@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InputGroup, Form, Button } from 'react-bootstrap'
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
@@ -7,10 +7,28 @@ import "./cartForm.css"
 import paypal from "./loghi/PayPal.svg.webp"
 import mastercard from "./loghi/Mastercard-logo.svg.png"
 import visa from "./loghi/Visa_Inc._logo.svg.png"
+import { useNavigate } from 'react-router-dom';
 
 
 function CartForm() {
-    const { closeCart, cartItems } = useShoppingCart();
+    const { closeCart, cartItems, setCartItems } = useShoppingCart();
+    const [checkoutMessage, setCheckoutMessage] = useState("")
+    const navigate = useNavigate();
+
+    function onClick(){
+        setCheckoutMessage("Acquisto effettuato!")
+        setTimeout(() => {
+            navigate("/");
+        }, 1500);
+
+        removeFromCart(0)
+    }
+
+    function removeFromCart(id:number) {
+        setCartItems((currItems: any[]) => {
+            return currItems.filter(item => item.id == id  )
+        })
+    }
 
     return (
         <>
@@ -18,10 +36,10 @@ function CartForm() {
                 <div className='form-dati'>
                     <h4>Inserisci dettagli spedizione</h4>
                     <div>
-                        <input type="text" placeholder='Nome' />
-                        <input type="text" placeholder='Cognome' />
+                        <input type="text" placeholder='Nome' required />
+                        <input type="text" placeholder='Cognome' required/>
                     </div>
-                    <input type="text" placeholder='Indirizzo di spedizione' />
+                    <input type="text" placeholder='Indirizzo di spedizione' required/>
                 </div>
 
 
@@ -31,10 +49,12 @@ function CartForm() {
                     inputMode="numeric" 
                     placeholder='Card number'
                     pattern="[0-9\s]{13,19}"
-                    maxLength={16} />
+                    maxLength={19}
+                    required />
                     <div>
-                        <input type="date" placeholder='Scadenza' />
+                        <input type="month" placeholder='Scadenza' required/>
                         <input type="password"
+                        required
                         inputMode="numeric" 
                         maxLength={3} placeholder='CVV' />
                     </div>
@@ -71,6 +91,7 @@ function CartForm() {
                         }, 0)}
                         € </h4>
                     <Button
+                    onClick={onClick}
                         className="prd-btn"
                         style={{
                             borderRadius: 5,
@@ -81,6 +102,14 @@ function CartForm() {
                         }}>
                         Checkout
                     </Button>
+
+                        <h3
+                        style={{
+                            color: "rgb(239, 66, 66)",
+                            marginTop: "10px"
+                        }}
+                        >{checkoutMessage}</h3>
+
                 </div>
 
             </div>
